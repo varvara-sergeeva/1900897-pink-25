@@ -1,7 +1,7 @@
 # Личный проект «Пинк» 
 
 * Студент: [Varvara Sergeeva](https://up.htmlacademy.ru/adaptive/25/user/1900897).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Остаповец](https://htmlacademy.ru/profile/seraphim)
 
 ---
 
