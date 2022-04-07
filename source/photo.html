@@ -92,26 +92,21 @@
       <p class="gallery-page__appeal">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
       <div class="posting__container">
         <img class="posting__photo" src="//" alt="Загруженное вами фото">
-        <div class="posting__filter filter slider">
-          <ul class="filter__list slider__list">
-            <li class="filter__item filter__item--crop slider__item">
-              <input class="filter__crop" type="range" min="0" max="100" value="87" id="filter-crop">
-              <label class="visually-hidden" for="filter-crop">Шкала для обрезки изображения</label>
+        <div class="posting__filter filter">
+          <ul class="filter__list">
+            <li class="filter__item">
+              <input class="filter__crop" type="radio" name="processing" value="crop" aria-label="Шкала для обрезки изображения" checked>
+              <div class="filter__range-slider"><span class="filter__active-segment"></span></div>
             </li>
-            <li class="filter__item filter__item--fill slider__item">
-              <input class="filter-fill" type="range" min="0" max="100" value="15" id="filter-fill">
-              <label class="visually-hidden" for="filter-fill">Шкала для заливки изображения</label>
+            <li class="filter__item">
+              <input class="filter__fill" type="radio" name="processing" value="fill" aria-label="Шкала для заливки изображения">
+              <div class="filter__range-slider"><span class="filter__active-segment"></span></div>
             </li>
-            <li class="filter__item filter__item--brightness slider__item">
-              <input class="filter-brightness" type="range" min="0" max="100" value="50" id="filter-brightness">
-              <label class="visually-hidden" for="filter-brightness">Шкала яркости изображения</label>
+            <li class="filter__item">
+              <input class="filter__brightness" type="radio" name="processing" value="brightness" aria-label="Шкала яркости изображения">
+              <div class="filter__range-slider"><span class="filter__active-segment"></span></div>
             </li>
           </ul>
-          <p class="filter__toggles slider__toggles">
-            <button class="slider__toggle" type="button"></button>
-            <button class="slider__toggle" type="button"></button>
-            <button class="slider__toggle" type="button"></button>
-          </p>
         </div>
         <div class="posting__send">
           <button type="submit">Запостить</button>
