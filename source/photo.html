@@ -92,25 +92,25 @@
       <p class="gallery-page__appeal">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
       <div class="posting__container">
         <img class="posting__photo" src="//" alt="Загруженное вами фото">
-        <div class="posting__filter filter">
-          <ul class="filter__list">
-            <li class="filter__item">
-              <input class="filter__crop" type="radio" name="processing" value="crop" aria-label="Шкала для обрезки изображения" checked>
-              <div class="filter__range-slider"><span class="filter__active-segment"></span></div>
+        <div class="posting__filter photo-filter">
+          <ul class="photo-filter__list">
+            <li class="photo-filter__item">
+              <input class="photo-filter__crop" type="radio" name="processing" value="crop" aria-label="Шкала для обрезки изображения" checked>
+              <div class="photo-filter__range-slider"><span class="photo-filter__active-segment"></span></div>
             </li>
-            <li class="filter__item">
-              <input class="filter__fill" type="radio" name="processing" value="fill" aria-label="Шкала для заливки изображения">
-              <div class="filter__range-slider"><span class="filter__active-segment"></span></div>
+            <li class="photo-filter__item">
+              <input class="photo-filter__fill" type="radio" name="processing" value="fill" aria-label="Шкала для заливки изображения">
+              <div class="photo-filter__range-slider"><span class="photo-filter__active-segment"></span></div>
             </li>
-            <li class="filter__item">
-              <input class="filter__brightness" type="radio" name="processing" value="brightness" aria-label="Шкала яркости изображения">
-              <div class="filter__range-slider"><span class="filter__active-segment"></span></div>
+            <li class="photo-filter__item">
+              <input class="photo-filter__brightness" type="radio" name="processing" value="brightness" aria-label="Шкала яркости изображения">
+              <div class="photo-filter__range-slider"><span class="photo-filter__active-segment"></span></div>
             </li>
           </ul>
         </div>
         <div class="posting__send">
-          <button type="submit">Запостить</button>
-          <button type="button" disabled>Отмена</button>
+          <button class="button button--upload" type="submit">Запостить</button>
+          <button class="button button--upload" type="button" disabled>Отмена</button>
         </div>
       </div>
     </section>
