@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Пинк</title>
     <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width">
   </head>
 
   <body>
@@ -40,7 +41,7 @@
       <section class="main__download-app download-app">
         <div class="download-app__container">
           <h2 class="visually-hidden">Скачать приложение «Пинк».</h2>
-          <img class="download-app__image" src="//app-in-hand.png//" alt="Изображено, как приложение видоизменяет фото.">
+          <img class="download-app__image" src="//img/app-in-hand.png" alt="Изображено, как приложение видоизменяет фото.">
           <p class="download-app__slogan">Взгляните на жизнь иначе!</p>
           <button class="download-app__button button button--download" href="#">Скачать приложение</button>
           <ul class="download-app__list">
@@ -60,9 +61,11 @@
 
       <section class="main__advantages advantages">
         <div class="advanteges__container">
-          <h2 class="visually-hidden">Преимущества приложения «Пинк».</h2>
-          <p class="advanteges__intro">Устали от серости мегаполиса?</p>
-          <p class="advanteges__intro">Нам есть, что вам предложить!</p>
+          <div class="advanteges__fon-wrapper">
+            <h2 class="visually-hidden">Преимущества приложения «Пинк».</h2>
+            <p class="advanteges__intro">Устали от серости мегаполиса?</p>
+            <p class="advanteges__intro">Нам есть, что вам предложить!</p>
+          </div>
           <ul class="advantages__list">
             <li class="advantages__item advantages__item--mood ">
               <h3 class="advantages__title">Поднимает настроение</h3>
@@ -80,11 +83,11 @@
         </div>
       </section>
 
-      <aside class="main__research research">
+      <aside class="main__research research visually-hidden">
         <div class="research__container">
           <h2 class="visually-hidden">Потверждён положительный эффект на 24 часа.</h2>
-          <p class="research__title">Эффект на 24 часа!</p>
-          <p class="research__description">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+          <p class="research__title">Эффект на&nbsp;24&nbsp;часа!</p>
+          <p class="research__description">Британские ученые провели исследования и&nbsp;доказали, что положительный эффект от&nbsp;использования приложения длится целые сутки!</p>
           <a class="research__link" href="#" target="_blank">Узнать больше об исследовании</a>
         </div>
       </aside>
@@ -96,22 +99,22 @@
             <blockquote class="reviews__item slider__item">
               <div class="reviews__user">
                 <cite class="reviews__user-nickname">Николай Петров</cite>
-                <small class="visually-hidden">25 лет, водитель трамвая</small>
-                <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                <small class="reviews__user-info visually-hidden">25 лет, водитель трамвая</small>
+                <p class="reviews__text">«Это приложение перевернуло мой мир и&nbsp;позволило по-новому взглянуть на&nbsp;привычные серые вещи! А еще я познакомился со&nbsp;своей будущей женой в&nbsp;комментариях к&nbsp;выложенной фотографии!»</p>
               </div>
             </blockquote>
-            <blockquote class="reviews__item slider__item">
+            <blockquote class="reviews__item slider__item visually-hidden">
               <div class="reviews__user">
                 <cite class="reviews__user-nickname">Юлия Сидоренко</cite>
-                <small class="visually-hidden">19 лет, студентка</small>
+                <small class="reviews__user-info visually-hidden">19 лет, студентка</small>
                 <p class="reviews__text">«Супер, можно делать крутые фото! Здесь лучшие смайлики, которые видела!»</p>
               </div>
             </blockquote>
-            <blockquote class="reviews__item slider__item">
+            <blockquote class="reviews__item slider__item visually-hidden">
               <div class="reviews__user">
                 <cite class="reviews__user-nickname">Саша Лагутенко</cite>
-                <small class="visually-hidden">22 лет, безработный</small>
-                <p class="reviews__text">«Отличное приложение, сделал себе заставку на телефон!»</p>
+                <small class="reviews__user-info visually-hidden">22 лет, безработный</small>
+                <p class="reviews__text">«Отличное приложение, сделал себе заставку на&nbsp;телефон!»</p>
               </div>
             </blockquote>
             <button class="reviews__previous" type="button">Предыдущий</button>
@@ -165,8 +168,7 @@
       <section class="main__feedback feedback">
         <div class="feedback__container">
           <h2 class="visually-hidden">Наши контакты</h2>
-          <p class="feedback__slogan">Остались вопросы?</p>
-          <p class="feedback__slogan">Свяжитесь с нами!</p>
+          <p class="feedback__slogan">Остались вопросы? Свяжитесь с нами!</p>
           <div class="feedback__contacts contact">
             <ul class="contact__list">
               <li class="contact__item contact__item-phone">
@@ -194,7 +196,7 @@
     <footer class="footer">
       <div class="footer__logo logo">
         <a href="#">
-          <img class="logo logo--middle" src="./img/logo--middle.svg" width="74" height="23" alt="Логотип приложения «Пинк».">
+          <img class="logo logo--middle" src="./img/logo--middle.svg" width="145" height="40" alt="Логотип приложения «Пинк».">
         </a>
       </div>
       <div class="footer__social social">

@@ -1,6 +1,8 @@
 /*Добавление глобальных стилей*/
 @import "global/font.scss";
 @import "global/color.scss";
+@import "global/visually-hidden.scss";
+@import "global/body.scss";
 /*Добавление совместных блоков*/
 @import "blocks/header.scss";
 @import "blocks/logo.scss";

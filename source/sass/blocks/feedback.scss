@@ -1,3 +1,10 @@
 .feedback {
+  background-color: $menu-color;
+}
 
+.feedback__slogan {
+  max-width: 222px;
+  margin: 0 auto;
+
+  @include font-options(24px, 29px, lighter, $slider-color);
 }

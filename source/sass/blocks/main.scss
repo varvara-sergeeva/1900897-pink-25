@@ -1,3 +1,41 @@
 .main {
+  position: relative;
+  top: 259px;
+  font-family: "OpenSans", "Arial", sans-serif;
+  border: 2px solid hsl(305, 100%, 48%);
+}
 
+.main__download-app {
+  box-sizing: border-box;
+  border: 2px solid hsl(207, 96%, 44%);
+  padding: 30px 20px;
+}
+
+.main__advantages {
+  box-sizing: border-box;
+  padding-top: 26px;
+  border: 2px solid hsl(110, 96%, 44%);
+}
+
+.main__research {
+  box-sizing: border-box;
+  border: 2px solid hsl(207, 96%, 44%);
+}
+
+.main__reviews {
+  box-sizing: border-box;
+  padding: 50px 20px;
+  border: 2px solid hsl(110, 96%, 44%);
+}
+
+.main__rate {
+  box-sizing: border-box;
+  padding: 100px 0;
+  border: 2px solid hsl(207, 96%, 44%);
+}
+
+.main__feedback {
+  box-sizing: border-box;
+  padding-top: 47px;
+  border: 2px solid hsl(110, 96%, 44%);
 }
