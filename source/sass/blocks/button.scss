@@ -1,5 +1,11 @@
 .button {
-
+  @include font-options(18px, 30px, 700, $menu-color);
+  text-transform: uppercase;
+  width: 276px;
+  height: 59px;
+  background-color: $form-button-color;
+  border: 2px solid $form-button-color;
+  border-radius: 1px;
 }
 
 .button--download {

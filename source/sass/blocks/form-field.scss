@@ -1,3 +1,20 @@
 .form-field {
 
 }
+
+.form-field__title {
+  @include colored-text;
+  margin: 0;
+  padding-bottom: 22px;
+  text-align: center;
+}
+
+.form-field__conteiner {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.form-field__comment {
+  @include desctop-text;
+}

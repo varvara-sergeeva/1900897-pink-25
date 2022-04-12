@@ -1,3 +1,33 @@
-.form {
+.form__purpose {
+  @include mobile-text;
+  line-height: 30px;
+  text-align: center;
+  margin: 0;
+  padding: 54px 20px;
+}
 
+.form__user-name {
+  padding: 0 20px;
+  border: 2px solid hsl(0, 0%, 0%);
+}
+
+.form__filter {
+  border: 2px solid hsl(0, 100%, 47%);
+}
+
+.form__user-contacts {
+  border: 2px solid hsl(0, 0%, 0%);
+}
+
+.form__radio {
+  border: 2px solid hsl(0, 100%, 47%);
+}
+
+.form__field {
+  padding: 42px 20px 0 20px;
+  border: 2px solid hsl(0, 0%, 0%);
+}
+
+.form__submit {
+  border: 2px solid hsl(0, 100%, 47%);
 }
