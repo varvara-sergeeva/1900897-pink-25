@@ -1,3 +1,26 @@
-.posting {
+.posting__container {
+  background-color: $input-color;
+  padding: 20px;
+  height: 750px;
+}
 
+.posting__send {
+  position: relative;
+  height: 200px;
+}
+
+.posting__send::before {
+  content: "";
+  position: absolute;
+  top: -38px;
+  left: -20px;
+  display: block;
+  width: 320px;
+  height: 1px;
+  background-color: $slider-color;
+  opacity: 0.1;
+}
+
+.posting__send button {
+  margin-top: 12px;
 }

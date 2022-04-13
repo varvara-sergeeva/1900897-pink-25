@@ -16,7 +16,7 @@
       <button class="navigation__toggle" type="button">
         <span>=</span>
       </button>
-      <div class="navigation__container">
+      <div class="navigation__container visually-hidden">
         <ul class="navigation__menu menu">
           <li class="menu__item">
             <a href="index.html">Главная</a>
@@ -36,10 +36,11 @@
   </header>
 
   <main class="gallery-page">
-    <h1 class="visually-hidden">Галерея</h1>
-
+    <div class="gallery-page__top">
+      <h1 class="gallery-page__title">Фотографии пользователей</h1>
+    </div>
     <section class="gallery-page__photo gallery">
-      <h2 class="gallery-page__subtitle">Фотографии пользователей</h2>
+      <h2 class="gallery-page__subtitle visually-hidden">Галерея</h2>
       <p class="gallery-page__appeal">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
       <div class="gallery__container">
         <ul class="gallery__list">
