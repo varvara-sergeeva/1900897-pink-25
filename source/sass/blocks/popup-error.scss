@@ -1,0 +1,17 @@
+.popup-error {
+  box-sizing: border-box;
+  padding: 44px 20px 52px 20px;
+  text-align: center;
+}
+
+.popup-error__title {
+  @include mobile-title;
+  margin: 0;
+  padding-bottom: 25px;
+}
+
+.popup-error__prompt {
+  @include mobile-text;
+  margin: 0;
+  padding-bottom: 43px;
+}

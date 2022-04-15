@@ -1,0 +1,13 @@
+.user-contacts fieldset {
+  border: none;
+}
+
+.user-contacts__conteiner {
+  padding: 26px 20px;
+}
+
+.user-contacts label {
+  @include colored-text;
+  display: block;
+  padding-bottom: 17px;
+}

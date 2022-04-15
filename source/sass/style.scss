@@ -1,1 +1,43 @@
-// Начните писать стили здесь
+/*Добавление глобальных стилей*/
+@import "global/font.scss";
+@import "global/color.scss";
+@import "global/visually-hidden.scss";
+@import "global/body.scss";
+/*Добавление совместных блоков*/
+@import "blocks/header.scss";
+@import "blocks/logo.scss";
+@import "blocks/navigation.scss";
+@import "blocks/menu.scss";
+@import "blocks/footer.scss";
+@import "blocks/social.scss";
+@import "blocks/copyright.scss";
+@import "blocks/button.scss";
+/*Блоки основной страницы*/
+@import "blocks/main.scss";
+@import "blocks/download-app.scss";
+@import "blocks/advantages.scss";
+@import "blocks/research.scss";
+@import "blocks/reviews.scss";
+@import "blocks/slider.scss";
+@import "blocks/rate.scss";
+@import "blocks/table.scss";
+@import "blocks/feedback.scss";
+@import "blocks/contact.scss";
+/*Блоки формы-конкурса*/
+@import "blocks/form-page.scss";
+@import "blocks/form.scss";
+@import "blocks/user-name.scss";
+@import "blocks/user-info.scss";
+@import "blocks/filter.scss";
+@import "blocks/user-contacts.scss";
+@import "blocks/radio-device.scss";
+@import "blocks/form-field.scss";
+@import "blocks/submit.scss";
+@import "blocks/popup-error.scss";
+@import "blocks/popup-confirm.scss";
+/*Блоки фотогалереи*/
+@import "blocks/gallery-page.scss";
+@import "blocks/gallery.scss";
+@import "blocks/photo.scss";
+@import "blocks/posting.scss";
+@import "blocks/photo-filter.scss";

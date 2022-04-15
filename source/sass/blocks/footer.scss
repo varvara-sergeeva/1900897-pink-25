@@ -1,0 +1,10 @@
+.footer {
+  position: relative;
+  top: 250px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40px 20px;
+  background-color: $menu-color;
+
+  border: 2px solid hsl(0, 100%, 50%);
+}

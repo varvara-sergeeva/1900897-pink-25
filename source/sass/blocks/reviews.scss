@@ -1,0 +1,33 @@
+.reviews__container {
+  width: 100%;
+  height: 300px;
+}
+
+.reviews__item {
+  margin: 0;
+}
+
+.reviews__user {
+  width: 280px;
+}
+
+.reviews__user-nickname {
+  @include mobile-title;
+  display: block;
+  line-height: 30px;
+  font-style: normal;
+  text-align: center;
+}
+
+.reviews__user-info {
+  display: block;
+  text-align: center;
+
+  @include font-options(14px, 30px, normal, hsl(211, 27%, 21%));
+}
+
+.reviews__text {
+  @include mobile-text;
+  line-height: 30px;
+  text-align: center;
+}

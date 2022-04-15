@@ -1,0 +1,14 @@
+.submit {
+  padding: 52px 22px 26px 22px;
+  text-align: center;
+}
+
+.submit__note {
+  @include mobile-text;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.submit__note sup {
+  color: $menu-color-active;
+}

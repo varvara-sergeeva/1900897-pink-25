@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Фотографии</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width">
 </head>
 
 <body>
@@ -14,7 +16,7 @@
       <button class="navigation__toggle" type="button">
         <span>=</span>
       </button>
-      <div class="navigation__container">
+      <div class="navigation__container visually-hidden">
         <ul class="navigation__menu menu">
           <li class="menu__item">
             <a href="index.html">Главная</a>
@@ -34,10 +36,11 @@
   </header>
 
   <main class="gallery-page">
-    <h1 class="visually-hidden">Галерея</h1>
-
+    <div class="gallery-page__top">
+      <h1 class="gallery-page__title">Фотографии пользователей</h1>
+    </div>
     <section class="gallery-page__photo gallery">
-      <h2 class="gallery-page__subtitle">Фотографии пользователей</h2>
+      <h2 class="gallery-page__subtitle visually-hidden">Галерея</h2>
       <p class="gallery-page__appeal">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
       <div class="gallery__container">
         <ul class="gallery__list">
@@ -92,30 +95,25 @@
       <p class="gallery-page__appeal">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
       <div class="posting__container">
         <img class="posting__photo" src="//" alt="Загруженное вами фото">
-        <div class="posting__filter filter slider">
-          <ul class="filter__list slider__list">
-            <li class="filter__item filter__item--crop slider__item">
-              <input class="filter__crop" type="range" min="0" max="100" value="87" id="filter-crop">
-              <label class="visually-hidden" for="filter-crop">Шкала для обрезки изображения</label>
+        <div class="posting__filter photo-filter">
+          <ul class="photo-filter__list">
+            <li class="photo-filter__item">
+              <input class="photo-filter__crop" type="radio" name="processing" value="crop" aria-label="Шкала для обрезки изображения" checked>
+              <div class="photo-filter__range-slider"><span class="photo-filter__active-segment"></span></div>
             </li>
-            <li class="filter__item filter__item--fill slider__item">
-              <input class="filter-fill" type="range" min="0" max="100" value="15" id="filter-fill">
-              <label class="visually-hidden" for="filter-fill">Шкала для заливки изображения</label>
+            <li class="photo-filter__item">
+              <input class="photo-filter__fill" type="radio" name="processing" value="fill" aria-label="Шкала для заливки изображения">
+              <div class="photo-filter__range-slider"><span class="photo-filter__active-segment"></span></div>
             </li>
-            <li class="filter__item filter__item--brightness slider__item">
-              <input class="filter-brightness" type="range" min="0" max="100" value="50" id="filter-brightness">
-              <label class="visually-hidden" for="filter-brightness">Шкала яркости изображения</label>
+            <li class="photo-filter__item">
+              <input class="photo-filter__brightness" type="radio" name="processing" value="brightness" aria-label="Шкала яркости изображения">
+              <div class="photo-filter__range-slider"><span class="photo-filter__active-segment"></span></div>
             </li>
           </ul>
-          <p class="filter__toggles slider__toggles">
-            <button class="slider__toggle" type="button"></button>
-            <button class="slider__toggle" type="button"></button>
-            <button class="slider__toggle" type="button"></button>
-          </p>
         </div>
         <div class="posting__send">
-          <button type="submit">Запостить</button>
-          <button type="button" disabled>Отмена</button>
+          <button class="button button--upload" type="submit">Запостить</button>
+          <button class="button button--upload" type="button" disabled>Отмена</button>
         </div>
       </div>
     </section>

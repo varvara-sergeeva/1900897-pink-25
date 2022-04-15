@@ -1,0 +1,46 @@
+.advantages {
+  width: 100%;
+  height: 1000px;
+  background-color: hsl(0, 0%, 95%);
+}
+
+.advanteges__fon-wrapper {
+  width: 100%;
+  height: 200px;
+  background-color: $menu-color;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.advanteges__intro {
+  text-align: center;
+
+  @include font-options(24px, 28px, 300, $slider-color);
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 20px 20px;
+  width: 268px;
+  list-style-type: none;
+}
+
+.advantages__title {
+  @include mobile-title;
+  text-align: center;
+}
+
+.advantages__description {
+  @include mobile-text;
+  text-align: center;
+}
+
+.advantages__item {
+  position: relative;
+}
+
+.advantages__item--friends::after {
+  content: url("../../img/advanteges_photo-pink-smile.png");
+  position: absolute;
+  top: 150px;
+  left: calc(50% - 78px);
+}

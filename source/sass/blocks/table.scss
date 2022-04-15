@@ -1,0 +1,35 @@
+.table {
+  border-collapse: collapse;
+}
+
+.table th {
+  width: 276px;
+  height: 94px;
+
+  @include font-options(16px, 30px, bold, $menu-color);
+  text-transform: uppercase;
+  background-color: $slider-color;
+  border-left: 2px solid hsl(0, 0%, 95%);
+}
+
+.table span {
+  display: block;
+
+  @include font-options(18px, 30px, lighter, $menu-color);
+}
+
+.table td {
+  height: 55px;
+  background-color: $menu-color;
+  border-left: 2px solid hsl(0, 0%, 95%);
+}
+
+.table__item:first-child {
+  @include font-options(14px, 30px, normal, $slider-color);
+  text-transform: uppercase;
+  padding-left: 20px;
+}
+
+.table__item:not(:first-child) {
+  text-align: center;
+}

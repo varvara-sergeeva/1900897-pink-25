@@ -1,0 +1,18 @@
+.gallery__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.gallery__container {
+  padding: 0 20px;
+}
+
+.gallery__item {
+  background-color: $input-color;
+  margin: 20px 0;
+}
+
+.gallery__item:last-child {
+  margin-bottom: 50px;
+}

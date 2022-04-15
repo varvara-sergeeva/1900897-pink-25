@@ -1,0 +1,24 @@
+.form-page {
+  font-family: "OpenSans", "Arial", sans-serif;
+}
+
+.form-page__popup {
+  border: 2px solid hsl(234, 93%, 35%);
+}
+
+.form-page__top {
+  background-image: url("../../img/back-mobile.jpg");
+  background-color: $slider-color;
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 100%;
+  height: 170px;
+}
+
+.form-page__description {
+  @include font-options(24px, 32px, lighter, $menu-color);
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0 0 0 0;
+  padding: 36px 20px;
+}

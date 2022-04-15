@@ -1,0 +1,26 @@
+.menu {
+  position: absolute;
+  top: 66px;
+  right: 0;
+  width: 100%;
+  height: 259px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background-color: $slider-color;
+  font-family: "OpenSans", "Arial", sans-serif;
+  text-align: center;
+}
+
+.menu__item a {
+  @include font-options(18px, 32px, 700, $menu-color);
+  text-decoration: none;
+}
+
+.menu__item a:hover {
+  color: $menu-color-active;
+}
+
+.menu__item a:active {
+  @include color-opacity($menu-color-active, 0.3);
+}
