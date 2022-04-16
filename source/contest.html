@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Конкурс</title>
   <link rel="stylesheet" href="css/style.css">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -24,8 +24,8 @@
           <li class="menu__item">
             <a href="photo.html">Фотографии</a>
           </li>
-          <li class="menu__item">
-            <a class="menu__item menu__item--active">Конкурс</a>
+          <li class="menu__item menu__item--active">
+            <a>Конкурс</a>
           </li>
           <li class="menu__item">
             <a href="https://up.htmlacademy.ru/adaptive/25">HTML Academy</a>
@@ -67,37 +67,37 @@
             <li class="flilter__item">
               <label>
                 <input type="checkbox" name="selfie-with-shark" value="filter-selfie-with-shark" checked>
-                Сделал селфи с акулой
+                <span>Сделал селфи с акулой</span>
               </label>
             </li>
             <li class="filter__item">
               <label>
                 <input type="checkbox" name="burned-on-beach" value="filter-burned-on-beach" checked>
-                Обгорел на пляже
+                <span>Обгорел на пляже</span>
               </label>
             </li>
             <li class="filter__item">
               <label>
                 <input type="checkbox" name="saw-chuck-norris" value="filter-saw-chuck-norris">
-                Видел Чака Норриса
+                <span>Видел Чака Норриса</span>
               </label>
             </li>
             <li class="filter__item">
               <label>
                 <input type="checkbox" name="bought-souvenirs" value="filter-bought-souvenirs">
-                Накупил сувениров
+                <span>Накупил сувениров</span>
               </label>
             </li>
             <li class="filter__item">
               <label>
                 <input type="checkbox" name="held-tower" value="filter-held-tower" checked>
-                Удержал башню
+                <span>Удержал башню</span>
               </label>
             </li>
             <li class="filter__item">
               <label>
                 <input type="checkbox" name="trashed-hotel" value="filter-trashed-hotel">
-                Разгромил отель
+                <span>Разгромил отель</span>
               </label>
             </li>
           </ul>
@@ -106,7 +106,7 @@
 
       <section class="form__user-contacts user-contacts">
         <h2 class="user-contacts__title visually-hidden">Ваши контакты</h2>
-        <fieldset class="user-contacts__conteiner">
+        <fieldset class="user-contacts__container">
           <legend class="user-contacts__legend visually-hidden">Контактная информация</legend>
           <p class="user-contacts__info user-info user-info--icon">
             <label class="user-info__phone-label" for="telephone">Номер телефона</label>
@@ -121,24 +121,25 @@
 
       <section class="form__radio radio-device">
         <h2 class="radio-device__title">С каким приложением путешествовали?</h2>
-        <fieldset class="radio-device__conteiner">
+        <fieldset class="radio-device__container">
           <legend class="radio-device__legend visually-hidden">С каким приложением путешествовали?</legend>
           <ul class="radio-device__list">
             <li class="radio-device__item">
               <label>
                 <input  type="radio" value="ios" name="device-type" checked>
-                Pink для iOS
+                <span>Pink для iOS</span>
               </label>
             </li>
             <li class="radio-device__item">
               <label>
-                <input  type="radio" value="android" name="device-type">Pink на Android
+                <input  type="radio" value="android" name="device-type">
+                <span>Pink на Android</span>
               </label>
             </li>
             <li class="radio-device__item">
               <label>
                 <input  type="radio" value="windows" name="device-type">
-                Windows Phone
+                <span>Windows Phone</span>
               </label>
             </li>
           </ul>
@@ -147,7 +148,7 @@
 
       <section class="form__field form-field">
         <h2 class="form-field__title">Опишите свои эмоции</h2>
-        <fieldset class="form-field__conteiner">
+        <fieldset class="form-field__container">
           <legend class="form-field__legend visually-hidden">Опишите свои эмоции</legend>
           <textarea class="form-field__comment" name="comment" cols="30" rows="8">Можно прям в красках, не стесняясь в выражениях</textarea>
         </fieldset>

@@ -1,0 +1,54 @@
+//Миксин для цвета
+@mixin color-opacity($color, $opacity) {
+  color: $color;
+  opacity: $opacity;
+}
+
+//Миксины для шрифта
+@mixin mobile-text {
+  font-family: $ff;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: $slider-color;
+}
+
+@mixin desctop-text {
+  font-family: $ff;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: $slider-color;
+}
+
+@mixin mobile-title {
+  font-family: $ff;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+}
+
+@mixin desctop-title {
+  font-family: $ff;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+  color: #000000;
+}
+
+@mixin colored-text {
+  font-family: $ff;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: $menu-color-active;
+  text-transform: uppercase;
+}
+
+@mixin font-options($size, $line-height, $weigt, $color) {
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $weigt;
+  color: $color;
+}
