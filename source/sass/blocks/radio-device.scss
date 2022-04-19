@@ -15,6 +15,10 @@
   padding: 0;
 }
 
+.radio-device__legend {
+  display: none;
+}
+
 .radio-device__list {
   margin: 0;
   padding: 0;
@@ -23,4 +27,14 @@
 
 .radio-device__item {
   @include desctop-text;
+}
+
+@media (min-width: $tablet) {
+  .radio-device {
+    background-color: $menu-color;
+  }
+
+  .radio-device__legend {
+    display: block;
+  }
 }

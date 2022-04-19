@@ -3,8 +3,7 @@
 }
 
 .feedback__slogan {
-  max-width: 222px;
-  margin: 0 auto;
+  text-align: center;
 
   @include font-options(24px, 29px, lighter, $slider-color);
 }

@@ -14,3 +14,10 @@
 .form-field__comment {
   @include desctop-text;
 }
+
+@media (min-width: $desktop) {
+  .form-field__comment {
+    width: 816px;
+    height: 124px;
+  }
+}

@@ -1,5 +1,6 @@
 .contact {
   position: relative;
+  padding: 0 20px;
 }
 
 .contact__list {
@@ -11,6 +12,8 @@
   position: relative;
   text-align: center;
   background-color: $menu-color;
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr;
 }
 
 .contact__list::before {
@@ -20,7 +23,7 @@
   height: 0;
   position: absolute;
   left: 0;
-  bottom: -50px;
+  bottom: -48px;
   border-bottom: 50px solid transparent;
   border-right: 50vw solid $menu-color;
 }
@@ -32,7 +35,7 @@
   height: 0;
   position: absolute;
   right: 0;
-  bottom: -50px;
+  bottom: -48px;
   border-bottom: 50px solid transparent;
   border-left: 50vw solid $menu-color;
 }
@@ -63,4 +66,31 @@
 .contact__map {
   margin: 0;
   padding: 0;
+}
+
+@media (min-width: $tablet) {
+  .contact__list {
+    grid-template: 1fr 1fr / 1fr 1fr;
+    grid-template-areas: "phone mail" "address address";
+    justify-content: center;
+  }
+
+  .contact__item-phone {
+    grid-area: phone;
+  }
+
+  .contact__item-mail {
+    grid-area: mail;
+  }
+
+  .contact__item-address {
+    grid-area: address;
+  }
+}
+
+@media (min-width: $tablet) {
+  .contact__list {
+    grid-template: auto / 1fr 1fr 1fr;
+    grid-template-areas: "phone mail address";
+  }
 }

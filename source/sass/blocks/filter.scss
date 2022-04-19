@@ -6,6 +6,10 @@
   border: 0 none;
 }
 
+.filter__legend {
+  display: none;
+}
+
 .filter__title {
   @include colored-text;
   text-align: center;
@@ -23,4 +27,31 @@
 
 .filter__item:last-child {
   padding-bottom: 42px;
+}
+
+@media (min-width: $tablet) {
+  .filter {
+    background-color: $menu-color;
+  }
+
+  .filter__legend {
+    display: block;
+
+    @include colored-text;
+    text-align: center;
+    padding: 42px 20px;
+  }
+
+  .filter__title {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop) {
+  .filter__list {
+    max-width: 940px;
+    margin: 0 auto;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+  }
 }

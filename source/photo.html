@@ -7,16 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
-  <header class="header">
+<body class="page">
+  <header class="page__header header">
     <a href="index.html" class="header__logo logo">
       <img class="logo logo--small" src="./img/logo--small.svg" width="74" height="23" alt="Логотип приложения «Пинк».">
     </a>
     <nav class="header__navigation navigation">
-      <button class="navigation__toggle" type="button">
-        <span>=</span>
-      </button>
-      <div class="navigation__container visually-hidden">
+      <div class="navigation__toggle">
+        <span></span>
+      </div>
+      <div class="navigation__container">
         <ul class="navigation__menu menu">
           <li class="menu__item">
             <a href="index.html">Главная</a>
@@ -35,7 +35,7 @@
     </nav>
   </header>
 
-  <main class="gallery-page">
+  <main class="page__main gallery-page">
     <div class="gallery-page__top">
       <h1 class="gallery-page__title">Фотографии пользователей</h1>
     </div>
@@ -120,7 +120,7 @@
 
   </main>
 
-  <footer class="footer">
+  <footer class="page__footer footer">
     <div class="footer__logo logo">
       <a href="#">
         <img class="logo logo--middle" src="./img/logo--middle.svg" width="74" height="23" alt="Логотип приложения «Пинк».">

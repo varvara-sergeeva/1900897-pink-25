@@ -2,6 +2,21 @@
   width: 100%;
   height: 1000px;
   background-color: hsl(0, 0%, 95%);
+
+  @media (min-width: $tablet) {
+    height: 671px;
+  }
+
+  @media (min-width: $desktop) {
+    height: 750px;
+  }
+}
+
+.advanteges__container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
 }
 
 .advanteges__crop-wrapper {
@@ -9,6 +24,10 @@
   height: 200px;
   background-color: $menu-color;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+  @media (min-width: $tablet) {
+    height: 240px;
+  }
 }
 
 .advanteges__intro {
@@ -22,25 +41,81 @@
   padding: 20px 20px;
   width: 268px;
   list-style-type: none;
+  position: relative;
+
+  &::after {
+    content: url("../../img/advanteges_mobile.png");
+    position: absolute;
+    left: calc(50% - 78px);
+  }
+
+  @media (min-width: $tablet) {
+    align-self: flex-end;
+
+    &::after {
+      content: url("../../img/advanteges_tablet.png");
+      position: absolute;
+      top: -50px;
+      left: -300px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    width: 940px;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .advantages__title {
   @include mobile-title;
   text-align: center;
+
+  @media (min-width: $tablet) {
+    text-align: left;
+  }
+
+  @media (min-width: $desktop) {
+    text-align: center;
+  }
 }
 
 .advantages__description {
   @include mobile-text;
   text-align: center;
+
+  @media (min-width: $tablet) {
+    text-align: left;
+  }
+
+  @media (min-width: $desktop) {
+    text-align: center;
+  }
 }
 
-.advantages__item {
-  position: relative;
-}
+@media (min-width: $desktop) {
+  .advantages__item {
+    position: relative;
+    top: -70px;
+  }
 
-.advantages__item--friends::after {
-  content: url("../../img/advanteges_photo-pink-smile.png");
-  position: absolute;
-  top: 150px;
-  left: calc(50% - 78px);
+  .advantages__item--mood::before {
+    content: url("../../img/advanteges_desctop-grey.png");
+    padding-left: calc(50% - 93px);
+  }
+
+  .advantages__item--changes::before {
+    content: url("../../img/advanteges_desctop-pink.png");
+    padding-left: calc(50% - 93px);
+  }
+
+  .advantages__item--friends::before {
+    content: url("../../img/advanteges_desctop-smile.png");
+    padding-left: calc(50% - 93px);
+  }
 }

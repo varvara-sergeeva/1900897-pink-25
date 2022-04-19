@@ -1,4 +1,5 @@
 .menu {
+  display: none;
   position: absolute;
   top: 66px;
   right: 0;
@@ -10,11 +11,28 @@
   background-color: $slider-color;
   font-family: $ff;
   text-align: center;
+
+  @media (min-width: $desktop) {
+    top: 0;
+    left: -130px;
+    height: 110px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
 }
 
 .menu__item a {
   @include font-options(18px, 32px, 700, $menu-color);
   text-decoration: none;
+
+  @media (min-width: $desktop) {
+    @include font-options(18px, 18px, normal, $menu-color);
+    text-decoration: none;
+    margin-left: 79px;
+  }
 }
 
 .menu__item a:hover {
@@ -23,4 +41,9 @@
 
 .menu__item a:active {
   @include color-opacity($menu-color-active, 0.3);
+}
+
+.menu__item--active > a {
+  padding-bottom: 19px;
+  border-bottom: 2px solid $menu-color;
 }

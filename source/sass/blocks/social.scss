@@ -1,5 +1,33 @@
 .social__list {
   margin: 0;
   padding: 0;
+  height: 54px;
   list-style-type: none;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.social__item {
+  align-self: center;
+}
+
+.social__item:nth-child(2) {
+  padding: 0 9px;
+}
+
+@media (min-width: $tablet) {
+  .sotial__list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+  }
+}
+
+@media (min-width: $desktop) {
+  .sotial__list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+  }
 }
