@@ -9,10 +9,14 @@
   text-align: center;
 }
 
-.radio-device__conteiner {
+.radio-device__container {
   border: none;
   margin: 0;
   padding: 0;
+}
+
+.radio-device__legend {
+  display: none;
 }
 
 .radio-device__list {
@@ -23,4 +27,14 @@
 
 .radio-device__item {
   @include desctop-text;
+}
+
+@media (min-width: $tablet) {
+  .radio-device {
+    background-color: $menu-color;
+  }
+
+  .radio-device__legend {
+    display: block;
+  }
 }

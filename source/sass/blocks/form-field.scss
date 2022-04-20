@@ -5,7 +5,7 @@
   text-align: center;
 }
 
-.form-field__conteiner {
+.form-field__container {
   border: none;
   margin: 0;
   padding: 0;
@@ -13,4 +13,11 @@
 
 .form-field__comment {
   @include desctop-text;
+}
+
+@media (min-width: $desktop) {
+  .form-field__comment {
+    width: 816px;
+    height: 124px;
+  }
 }

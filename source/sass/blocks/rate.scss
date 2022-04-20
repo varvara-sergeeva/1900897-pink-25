@@ -4,3 +4,26 @@
   background-color: hsl(0, 0%, 95%);
   clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 100%);
 }
+
+.rate__toggles {
+  background-color: hsl(0, 0%, 95%);
+  text-align: center;
+  margin: 0;
+  padding: 45px 0;
+}
+
+@media (min-width: $tablet) {
+  .rate__toggles {
+    display: none;
+  }
+
+  .rate {
+    padding: 100px 20px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .rate {
+    padding: 100px 130px;
+  }
+}

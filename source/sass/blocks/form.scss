@@ -8,26 +8,82 @@
 
 .form__user-name {
   padding: 0 20px;
-  border: 2px solid hsl(0, 0%, 0%);
 }
 
-.form__filter {
-  border: 2px solid hsl(0, 100%, 47%);
-}
-
-.form__user-contacts {
-  border: 2px solid hsl(0, 0%, 0%);
-}
-
-.form__radio {
-  border: 2px solid hsl(0, 100%, 47%);
-}
 
 .form__field {
   padding: 42px 20px 0 20px;
-  border: 2px solid hsl(0, 0%, 0%);
 }
 
-.form__submit {
-  border: 2px solid hsl(0, 100%, 47%);
+@media (min-width: $tablet) {
+  .form {
+    display: grid;
+    grid-template-columns: 1;
+  }
+
+  .form__purpose {
+    order: 1;
+  }
+
+  .form__user-name {
+    order: 2;
+  }
+
+  .form__filter {
+    order: 5;
+  }
+
+  .form__user-contacts {
+    order: 4;
+  }
+
+  .form__radio {
+    order: 3;
+  }
+
+  .form__field {
+    order: 6;
+  }
+
+  .form__submit {
+    order: 7;
+  }
+}
+
+@media (min-width: $desktop) {
+  .form {
+    grid-template-columns: 1fr 1fr;
+    max-width: 940px;
+    margin: 0 auto;
+  }
+
+  .form__purpose {
+    grid-column: span 2;
+  }
+
+  .form__user-name {
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .form__radio {
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .form__user-contacts {
+    grid-column: span 2;
+  }
+
+  .form__filter {
+    grid-column: span 2;
+  }
+
+  .form__field {
+    grid-column: span 2;
+  }
+
+  .form__submit {
+    grid-column: span 2;
+  }
 }
