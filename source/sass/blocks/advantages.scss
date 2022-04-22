@@ -105,17 +105,17 @@
   }
 
   .advantages__item--mood::before {
-    content: url("../../img/advanteges_desctop-grey.png");
+    content: url("../img/advanteges_desctop-grey.png");
     padding-left: calc(50% - 93px);
   }
 
   .advantages__item--changes::before {
-    content: url("../../img/advanteges_desctop-pink.png");
+    content: url("../img/advanteges_desctop-pink.png");
     padding-left: calc(50% - 93px);
   }
 
   .advantages__item--friends::before {
-    content: url("../../img/advanteges_desctop-smile.png");
+    content: url("../img/advanteges_desctop-smile.png");
     padding-left: calc(50% - 93px);
   }
 }

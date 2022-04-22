@@ -7,18 +7,17 @@
   background-color: $slider-color;
   background-repeat: no-repeat;
   background-position: top;
-  position: relative;
-  top: -66px;
-  z-index: -1;
   width: 100%;
   height: 237px;
 
   @media (min-width: $tablet) {
     top: -110px;
+    background-image: url("../../img/back-tablet.jpg");
     height: 440px;
   }
 
   @media (min-width: $desktop) {
+    background-image: url("../../img/back-desktop.jpg");
     height: 394px;
   }
 }
@@ -46,7 +45,7 @@
   text-align: center;
   line-height: 30px;
   margin: 0;
-  padding: 0 40px 60px 40px;
+  padding: 50px 40px;
 }
 
 .gallery-page__photo {

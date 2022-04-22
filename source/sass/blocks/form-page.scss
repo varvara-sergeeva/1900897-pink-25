@@ -1,7 +1,5 @@
 .form-page {
   font-family: $ff;
-  position: relative;
-  top: -66px;
 
   @media (min-width: $tablet) {
     top: -110px;
@@ -17,10 +15,12 @@
   height: 237px;
 
   @media (min-width: $tablet) {
+    background-image: url("../../img/back-tablet.jpg");
     height: 440px;
   }
 
   @media (min-width: $desktop) {
+    background-image: url("../../img/back-desktop.jpg");
     height: 394px;
   }
 }
