@@ -4,9 +4,18 @@
   list-style-type: none;
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 300px));
+  //grid-template-columns: repeat(auto-fit, minmax(280px, 300px));
+  grid-template-columns: minmax(280px, 300px);
   row-gap: 20px;
   column-gap: 20px;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: repeat(2, minmax(280px, 300px));
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(3, minmax(280px, 300px));
+  }
 }
 
 .gallery__item {
