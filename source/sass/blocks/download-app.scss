@@ -3,17 +3,32 @@
   background-image: url("../../img/back-mobile.jpg");
   background-repeat: no-repeat;
   background-position: top center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/back-mobile-2x.jpg");
+    background-size: 320px auto;
+  }
   width: 100%;
   height: 733px;
 
   @media (min-width: $tablet) {
     background-image: url("../../img/back-tablet.jpg");
     height: 729px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/back-tablet-2x.jpg");
+      background-size: 660px auto;
+    }
   }
 
   @media (min-width: $desktop) {
     background-image: url("../../img/back-desktop.jpg");
     height: 853px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/back-desktop-2x.jpg");
+      background-size: 1200px auto;
+    }
   }
 }
 
