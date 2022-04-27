@@ -13,8 +13,10 @@
 
   <body class="page">
     <header class="page__header header">
-      <a href="#" class="header__logo logo">
-        <img class="logo logo--small" src="./img/logo--small.svg" width="74" height="23" alt="Логотип приложения «Пинк».">
+      <a href="index.html" class="header__logo logo">
+        <svg class="logo logo--small" width="74" height="23">
+          <use xlink:href="img/sprite.svg#logo-pink-small"></use>
+        </svg>
       </a>
       <nav class="header__navigation navigation">
         <div class="navigation__toggle">
@@ -54,13 +56,25 @@
           <button class="download-app__button button button--download" href="#">Скачать приложение</button>
           <ul class="download-app__list">
             <li class="download-app__item">
-              <a class="download-app__link download-app__link--apple" href=""><img src="./img/logo-apple.svg" alt="Логотип продукции Apple"></a>
+              <a class="download-app__link download-app__link--apple" href="https://www.apple.com/ru/app-store/">
+                <!--<svg class="download-app__link--apple-svg" width="47" height="56">
+                  <use xlink:href="#logo-apple"></use>
+                </svg>-->
+              </a>
             </li>
             <li class="download-app__item">
-              <a class="download-app__link download-app__link--android" href=""><img src="./img/logo-android.svg" alt="Логотип продукции Android"></a>
+              <a class="download-app__link download-app__link--android" href="https://play.google.com/store">
+                <!--<svg class="download-app__link--android-svg" width="43" height="47">
+                  <use xlink:href="#logo-android"></use>
+                </svg>-->
+              </a>
             </li>
             <li class="download-app__item">
-              <a class="download-app__link download-app__link--windows" href=""><img src="./img/logo-windows.svg" alt="Логотип продукции Windows"></a>
+              <a class="download-app__link download-app__link--windows" href="https://www.microsoft.com/ru-ru/store/apps">
+                <!--<svg class="download-app__link--windows-svg" width="44" height="41">
+                  <use xlink:href="#logo-windows"></use>
+                </svg>-->
+              </a>
             </li>
           </ul>
           <p class="download-app__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
@@ -154,8 +168,8 @@
             </tr>
             <tr class="table__options">
               <td class="table__item slider__item slider__item-column-option">Смайлики</td>
-              <td class="table__item slider__item slider__item-column-base"><img src="./img/no.svg" alt="Не входит в тариф."width="27" height="27"></td>
-              <td class="table__item slider__item slider__item-column-standard"><img src="./img/yes.svg" alt="Включен в тариф."width="31" height="21"></td>
+              <td class="table__item slider__item slider__item-column-base"><img src="./img/no.svg" alt="Не входит в тариф."width="31" height="21"></td>
+              <td class="table__item slider__item slider__item-column-standard"><img src="./img/yes.svg" alt="Включен в тариф."width="31" height="21"></span></td>
               <td class="table__item slider__item slider__item-column-unlimited"><img src="./img/yes.svg" alt="Включен в тариф."width="31" height="21"></td>
             </tr>
             <tr class="table__options">
@@ -203,8 +217,10 @@
 
     <footer class="page__footer footer">
       <div class="footer__logo logo">
-        <a href="#">
-          <img class="logo logo--middle" src="./img/logo--middle.svg" width="145" height="40" alt="Логотип приложения «Пинк».">
+        <a href="index.html">
+          <svg width="145" height="40" xmlns="http://www.3w.org/2000/svg">
+            <use href="img/sprite.svg#logo-android"></use>
+          </svg>
         </a>
       </div>
       <div class="footer__social social">

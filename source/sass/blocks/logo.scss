@@ -1,7 +1,48 @@
 .logo {
-  display: block;
-}
+  color: $menu-color;
 
-.logo--middle {
-  margin: 0 auto;
+  &:hover {
+    color: $menu-color-active;
+  }
+
+  &:active {
+    color: $menu-color;
+    opacity: 0.3;
+  }
+
+  &--middle {
+    display: none;
+  }
+
+  &--big {
+    display: none;
+  }
+
+  @media (min-width: $tablet) {
+    &--small {
+      display: none;
+    }
+
+    &--middle {
+      display: block;
+    }
+
+    &--big {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &--small {
+      display: none;
+    }
+
+    &--middle {
+      display: none;
+    }
+
+    &--big {
+      display: block;
+    }
+  }
 }
