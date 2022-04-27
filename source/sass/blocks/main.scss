@@ -1,11 +1,5 @@
 .main {
   font-family: $ff;
-  position: relative;
-  top: -132px;
-
-  @media (min-width: $tablet) {
-    top: -198px;
-  }
 }
 
 .main__download-app {

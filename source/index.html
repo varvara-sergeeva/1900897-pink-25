@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="html" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>Пинк</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon"href="favicon.ico">
+    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
+    <link rel="manifest" href="favicon.webmanifest">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body class="page">
@@ -36,16 +40,15 @@
     </header>
 
     <main class="page__main main">
-      <h1 class="visually-hidden">Приложение «Пинк» делает жизнь ярче.</h1>
-
       <section class="main__download-app download-app">
+        <h1 class="visually-hidden">Приложение «Пинк» делает жизнь ярче.</h1>
         <div class="download-app__container">
           <h2 class="visually-hidden">Скачать приложение «Пинк».</h2>
           <picture class="download-app__image">
-            <source srcset="/img/download-app__mobile.png" type="image/png" media="(max-width: 659px)">
-            <source srcset="/img/download-app__tablet.png" type="image/png" media="(min-width: $tablet)">
-            <source srcset="/img/download-app__desctop.png" type="image/png" media="(min-width: $desctop)">
-            <img src="./img/download-app__tablet.png" alt="Изображено, как приложение видоизменяет фото.">
+            <source srcset="img/download-app-desctop.png 1x, img/download-app-desctop-2x.png 2x" type="image/png" media="(min-width: 1200px)">
+            <source srcset="img/download-app-tablet.png 1x, img/download-app-tablet-2x.png 2x" type="image/png" media="(min-width: 660px)">
+            <source srcset="img/download-app-mobile.png 1x, img/download-app-mobile-2x.png 2x" type="image/png" media="(max-width: 659px)">
+            <img src="img/download-app-mobile.png" alt="Изображено, как приложение видоизменяет фото.">
           </picture>
           <p class="download-app__slogan">Взгляните на жизнь иначе!</p>
           <button class="download-app__button button button--download" href="#">Скачать приложение</button>
@@ -145,21 +148,21 @@
             </tr>
             <tr class="table__options">
               <td class="table__item slider__item slider__item-column-option">Розовый фильтр</td>
-              <td class="table__item slider__item slider__item-column-base"><img src="./img/yes.svg" alt="Включен в тариф."></td>
-              <td class="table__item slider__item slider__item-column-standard"><img src="./img/yes.svg" alt="Включен в тариф."></td>
-              <td class="table__item slider__item slider__item-column-unlimited"><img src="./img/yes.svg" alt="Включен в тариф."></td>
+              <td class="table__item slider__item slider__item-column-base"><img src="./img/yes.svg" alt="Включен в тариф."width="31" height="21"></td>
+              <td class="table__item slider__item slider__item-column-standard"><img src="./img/yes.svg" alt="Включен в тариф."width="31" height="21"></td>
+              <td class="table__item slider__item slider__item-column-unlimited"><img src="./img/yes.svg" alt="Включен в тариф."width="31" height="21"></td>
             </tr>
             <tr class="table__options">
               <td class="table__item slider__item slider__item-column-option">Смайлики</td>
-              <td class="table__item slider__item slider__item-column-base"><img src="./img/no.svg" alt="Не входит в тариф."></td>
-              <td class="table__item slider__item slider__item-column-standard"><img src="./img/yes.svg" alt="Включен в тариф."></td>
-              <td class="table__item slider__item slider__item-column-unlimited"><img src="./img/yes.svg" alt="Включен в тариф."></td>
+              <td class="table__item slider__item slider__item-column-base"><img src="./img/no.svg" alt="Не входит в тариф."width="27" height="27"></td>
+              <td class="table__item slider__item slider__item-column-standard"><img src="./img/yes.svg" alt="Включен в тариф."width="31" height="21"></td>
+              <td class="table__item slider__item slider__item-column-unlimited"><img src="./img/yes.svg" alt="Включен в тариф."width="31" height="21"></td>
             </tr>
             <tr class="table__options">
               <td class="table__item slider__item slider__item-column-option">Комментарии</td>
-              <td class="table__item slider__item slider__item-column-base"><img src="./img/no.svg" alt="Не входит в тариф."></td>
-              <td class="table__item slider__item slider__item-column-standard"><img src="./img/no.svg" alt="Не входит в тариф."></td>
-              <td class="table__item slider__item slider__item-column-unlimited"><img src="./img/yes.svg" alt="Включен в тариф."></td>
+              <td class="table__item slider__item slider__item-column-base"><img src="./img/no.svg" alt="Не входит в тариф."width="31" height="21"></td>
+              <td class="table__item slider__item slider__item-column-standard"><img src="./img/no.svg" alt="Не входит в тариф."width="27" height="27"></td>
+              <td class="table__item slider__item slider__item-column-unlimited"><img src="./img/yes.svg" alt="Включен в тариф."width="31" height="21"></td>
             </tr>
           </table>
           <p class="rate__toggles slider__toggles">

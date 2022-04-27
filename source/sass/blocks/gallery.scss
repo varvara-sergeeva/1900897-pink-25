@@ -2,17 +2,36 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
+  display: grid;
+  justify-content: center;
+  //grid-template-columns: repeat(auto-fit, minmax(280px, 300px));
+  grid-template-columns: minmax(280px, 300px);
+  row-gap: 20px;
+  column-gap: 20px;
 
-.gallery__container {
-  padding: 0 20px;
+  @media (min-width: $tablet) {
+    grid-template-columns: repeat(2, minmax(280px, 300px));
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(3, minmax(280px, 300px));
+  }
 }
 
 .gallery__item {
   background-color: $input-color;
-  margin: 20px 0;
 }
 
-.gallery__item:last-child {
-  margin-bottom: 50px;
+
+.gallery__item--panorama {
+  @media (min-width: $tablet) {
+    grid-column: span 2;
+    min-width: 600px;
+    min-height: 630px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-column: span 3;
+    max-height: 406px;
+  }
 }
