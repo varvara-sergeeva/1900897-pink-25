@@ -81,20 +81,62 @@
     display: block;
   }
 
-  .reviews__list {
-    position: relative;
-  }
-
   .reviews__previous {
     position: absolute;
     top: 50%;
     left: 130px;
+
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-top: 1px solid hsl(211, 27%, 21%, 0.3);
+    border-right: 1px solid hsl(211, 27%, 21%, 0.3);
+    margin-right: 60px;
+    background-color: transparent;
+    transform: rotate(-135deg);
+    cursor: pointer;
+
+    &:hover {
+      border-top: 1px solid hsl(211, 27%, 21%, 0.6);
+      border-right: 1px solid hsl(211, 27%, 21%, 0.6);
+    }
+
+    &:active {
+      border-top: 1px solid hsl(211, 27%, 21%, 0.1);
+      border-right: 1px solid hsl(211, 27%, 21%, 0.1);
+    }
+  }
+
+  .reviews__list {
+    position: relative;
   }
 
   .reviews__next {
     position: absolute;
     top: 50%;
     right: 150px;
+
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-top: 1px solid hsl(211, 27%, 21%, 0.3);
+    border-right: 1px solid hsl(211, 27%, 21%, 0.3);
+    margin-right: 60px;
+    background-color: transparent;
+    transform: rotate(45deg);
+    cursor: pointer;
+
+    &:hover {
+      border-top: 1px solid hsl(211, 27%, 21%, 0.6);
+      border-right: 1px solid hsl(211, 27%, 21%, 0.6);
+    }
+
+    &:active {
+      border-top: 1px solid hsl(211, 27%, 21%, 0.1);
+      border-right: 1px solid hsl(211, 27%, 21%, 0.1);
+    }
   }
 
   .slider__toggle {

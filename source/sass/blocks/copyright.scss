@@ -3,3 +3,15 @@
   line-height: 18px;
   padding-right: 15px;
 }
+
+.copyright__svg {
+  fill: $menu-color-active;
+
+  &:hover {
+    fill: $slider-color;
+  }
+
+  &:active {
+    fill: hsl(211, 27%, 21%, 0.3);
+  }
+}
