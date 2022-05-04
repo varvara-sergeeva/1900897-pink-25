@@ -8,13 +8,21 @@
   <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
   <link rel="manifest" href="favicon.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="page">
   <header class="page__header header">
     <a href="index.html" class="header__logo logo">
-      <img class="logo logo--small" src="./img/logo--small.svg" width="74" height="23" alt="Логотип приложения «Пинк».">
+      <svg class="logo logo--small" width="74" height="23">
+        <use xlink:href="img/sprite.svg#logo-pink-small"></use>
+      </svg>
+      <svg class="logo logo--middle" width="145" height="40">
+        <use xlink:href="img/sprite.svg#logo-pink-middle"></use>
+      </svg>
+      <svg class="logo logo--big" width="147" height="40">
+        <use xlink:href="img/sprite.svg#logo-pink-big"></use>
+      </svg>
     </a>
     <nav class="header__navigation navigation">
       <div class="navigation__toggle">
@@ -73,7 +81,7 @@
               <source srcset="img/gallery-drums-desctop.jpg 1x, img/gallery-drums-desctop-2x.jpg 2x" type="image/jpg" media="(min-width: 1200px)">
               <source srcset="img/gallery-drums-tablet.jpg 1x, img/gallery-drums-tablet-2x.jpg 2x" type="image/jpg" media="(min-width: 660px)">
               <img class="photo__picture" src="img/gallery-drums-mobile.jpg" srcset="img/gallery-drums-mobile-2x.jpg 2x" alt="Фото барабанной установки.">
-            </picture>>
+            </picture>
             <h3 class="photo__author">Антон <small class="photo__posting-time">(12 часов назад)</small></h3>
             <p class="photo__comment">Соседи будут рады!</p>
             <p class="photo__like">Нравится: <span class="photo__like-number">666</span></p>
@@ -136,15 +144,18 @@
         <div class="posting__filter photo-filter">
           <ul class="photo-filter__list">
             <li class="photo-filter__item">
-              <input class="photo-filter__crop" type="radio" name="processing" value="crop" aria-label="Шкала для обрезки изображения" checked>
+              <input class="photo-filter__input" type="radio" name="processing" value="crop" aria-label="Шкала для обрезки изображения" checked>1
+              <span class="photo-filter__crop"></span>
               <div class="photo-filter__range-slider"><span class="photo-filter__active-segment"></span></div>
             </li>
             <li class="photo-filter__item">
-              <input class="photo-filter__fill" type="radio" name="processing" value="fill" aria-label="Шкала для заливки изображения">
+              <input class="photo-filter__input" type="radio" name="processing" value="fill" aria-label="Шкала для заливки изображения">2
+              <span class="photo-filter__fill"></span>
               <div class="photo-filter__range-slider"><span class="photo-filter__active-segment"></span></div>
             </li>
             <li class="photo-filter__item">
-              <input class="photo-filter__brightness" type="radio" name="processing" value="brightness" aria-label="Шкала яркости изображения">
+              <input class="photo-filter__input" type="radio" name="processing" value="brightness" aria-label="Шкала яркости изображения">3
+              <span class="photo-filter__brightness"></span>
               <div class="photo-filter__range-slider"><span class="photo-filter__active-segment"></span></div>
             </li>
           </ul>
@@ -155,32 +166,47 @@
         </div>
       </div>
     </section>
-
   </main>
 
   <footer class="page__footer footer">
     <div class="footer__logo logo">
-      <a href="#">
-        <img class="logo logo--middle" src="./img/logo--middle.svg" width="74" height="23" alt="Логотип приложения «Пинк».">
+      <a class="logo__footer" href="index.html">
+        <svg class="logo__footer-glass" width="145" height="40">
+          <use xlink:href="img/sprite.svg#logo-pink-middle"></use>
+        </svg>
       </a>
     </div>
-    <div class="footer__sotial sotial">
-      <ul class="sotial__list">
-        <li class="sotial__item">
-          <a class="sotial__link social__link--vkontakte" href="https://vk.com/htmlacademy" target="_blank"><img src="./img/vk.svg" alt="Мы в контакте."></a>
+    <div class="footer__social social">
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" target="_blank">
+            <svg width="54" height="54" fill="black">
+              <use xlink:href="img/sprite.svg#vk"></use>
+            </svg>
+          </a>
         </li>
-        <li class="sotial__item">
-          <a class="sotial__link social__link--telegram" href="#" target="_blank"><img src="./img/telegram.svg" alt="Мы в Телеграмме."></a>
+        <li class="social__item">
+          <a class="social__link social__link--telegram" href="#" target="_blank">
+            <svg width="54" height="54">
+              <use xlink:href="img/sprite.svg#telegram"></use>
+            </svg>
+          </a>
         </li>
-        <li class="sotial__item">
-          <a class="sotial__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank"><img src="./img/youtube.svg" alt="Мы в Ютубе."></a>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
+            <svg width="54" height="54">
+              <use xlink:href="img/sprite.svg#youtube"></use>
+            </svg>
+          </a>
         </li>
       </ul>
     </div>
     <div class="footer__copyright copyright">
       <span class="copyright__text">Разработано</span>
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-        <img src="./img/html-academy.svg" alt="Логотип «HTML Academy» разработчика сайта.">
+        <svg class="copyright__svg" width="27" height="34">
+          <use xlink:href="img/sprite.svg#logo-html-academy"></use>
+        </svg>
       </a>
     </div>
   </footer>

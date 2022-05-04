@@ -16,17 +16,45 @@
   height: 55px;
   border: 3px solid $menu-color;
   border-radius: 29px;
+
+  &:hover {
+    background-color: $menu-color;
+    color: $menu-color-active;
+    transition-duration: 0.3s;
+  }
+
+  &:active {
+    background-color: $menu-color;
+    color: hsl(344, 68%, 49%, 0.3);
+    transition-duration: 0.3s;
+  }
+
+  @media (min-width: $tablet) {
+    background-color: transparent;
+  }
 }
 
 .button--upload {
   @include font-options(18px, 18px, 700, $menu-color-active);
-  background-color: $input-color;
+  background-color: transparent;
   text-transform: capitalize;
   box-sizing: border-box;
   width: 280px;
   height: 55px;
   border: 3px solid $menu-color-active;
   border-radius: 29px;
+
+  &:hover {
+    background-color: $menu-color-active;
+    color: $menu-color;
+    transition-duration: 0.3s;
+  }
+
+  &:active {
+    background-color: $menu-color-active;
+    color: hsl(0, 0%, 100%, 0.3);
+    transition-duration: 0.5s;
+  }
 
   @media (min-width: $desktop) {
     width: 183px;
@@ -42,7 +70,18 @@
 }
 
 .button--upload:disabled {
-  color: $slider-color;
-  border: 3px solid $slider-color;
-  opacity: 0.1;
+  color: hsl(211, 27%, 21%, 0.1);
+  border: 3px solid hsl(211, 27%, 21%, 0.1);
+
+  &:hover {
+    background-color: transparent;
+    color: hsl(211, 27%, 21%, 0.3);
+    border: 3px solid hsl(211, 27%, 21%, 0.3);
+  }
+
+  &:active {
+    color: hsl(0, 0%, 100%, 0.3);
+    background-color: hsl(211, 27%, 21%, 0.3);
+    border: 3px solid transparent;
+  }
 }

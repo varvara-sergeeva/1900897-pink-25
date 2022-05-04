@@ -53,6 +53,19 @@
 
 .contact__link:hover {
   @include font-options(24px, 32px, lighter, $slider-color);
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: hsl(0, 0%, 0%);
+    height: 1px;
+  }
 }
 
 .contact__link:active {
@@ -63,9 +76,9 @@
   opacity: 0.3;
 }
 
-.contact__map {
-  margin: 0;
-  padding: 0;
+.contact__map iframe {
+  border: none;
+  display: block;
 }
 
 @media (min-width: $tablet) {

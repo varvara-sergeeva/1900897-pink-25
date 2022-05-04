@@ -4,7 +4,14 @@
 
 .main__download-app {
   box-sizing: border-box;
-  padding: 0 20px;
+
+  @media (min-width: $tablet) {
+    padding-left: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 0;
+  }
 }
 
 .main__advantages {
