@@ -13,11 +13,12 @@
 
 .form-field__comment {
   @include desctop-text;
-}
+  appearance: none;
+  resize: none;   //почему-то не работает это свойство
 
-@media (min-width: $desktop) {
-  .form-field__comment {
+  @media (min-width: $desktop) {
     width: 816px;
     height: 124px;
   }
 }
+

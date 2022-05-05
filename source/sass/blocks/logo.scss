@@ -1,13 +1,15 @@
 .logo {
+  fill: $menu-color;
   color: $menu-color;
 
   &:hover {
+    fill: $menu-color-active;
     color: $menu-color-active;
   }
 
   &:active {
-    color: $menu-color;
-    opacity: 0.3;
+    fill: hsl(0, 0%, 100%, 0.3);
+    color: hsl(0, 0%, 100%, 0.3);
   }
 
   &--middle {
@@ -44,5 +46,19 @@
     &--big {
       display: block;
     }
+  }
+}
+
+.logo__footer-glass {
+  fill: $slider-color;
+  color: $menu-color-active;
+
+  &:hover {
+    fill: $menu-color-active;
+  }
+
+  &:active {
+    fill: hsl(211, 27%, 21%, 0.3);
+    color: hsl(344, 68%, 49%, 0.3);
   }
 }

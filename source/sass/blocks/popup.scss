@@ -1,0 +1,107 @@
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.popup__body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup__content {
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  background-color: $menu-color;
+  box-sizing: border-box;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 41px 22px 52px 22px;
+  border-radius: 5px;
+
+  @media (min-width: $tablet) {
+    min-width: 460px;
+    padding-top: 45px;
+    padding-bottom: 54px;
+  }
+
+  @media (min-width: $desktop) {
+    min-width: 780px;
+    padding-bottom: 52px;
+    background-image: linear-gradient($menu-color 57%, $input-color 57%, $input-color);
+  }
+}
+
+.popup__title {
+  @include mobile-title;
+  margin: 0;
+
+  @media (min-width: $tablet) {
+    @include desctop-title;
+    line-height: 40px;
+    text-align: center;
+    width: 260px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 500px;
+  }
+}
+
+.popup__prompt {
+  @include mobile-text;
+  margin: 0;
+  padding-top: 29px;
+  padding-bottom: 45px;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    @include mobile-title;
+    font-weight: 400;
+    width: 290px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 120px;
+    width: 350px;
+  }
+}
+
+.popup__content--confirm {
+  background-image: linear-gradient($menu-color 58%, $input-color 58%, $input-color);
+
+  @media (min-width: $tablet) {
+    background-image: linear-gradient($menu-color 63%, $input-color 63%, $input-color);
+  }
+
+  @media (min-width: $desktop) {
+    background-image: linear-gradient($menu-color 57%, $input-color 57%, $input-color);
+  }
+}
+
+.popup__content--confirm > .popup__prompt {
+  padding-bottom: 88px;
+  width: 266px;
+
+  @media (min-width: $tablet) {
+    width: 315px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 378px;
+    padding-bottom: 96px;
+  }
+}
+
+.popup__button {
+  @media (min-width: $desktop) {
+    width: 456px;
+  }
+}

@@ -31,6 +31,14 @@
   top: 10px;
   border-radius: 1px;
   transition: all 0.4s ease 0s;
+
+  &:hover {
+    background-color: $menu-color-active;
+  }
+
+  &:active {
+    background-color: hsl(344, 68%, 49%, 0.3);
+  }
 }
 
 .navigation__toggle::before,
@@ -43,6 +51,16 @@
   left: 0;
   border-radius: 1px;
   transition: all 0.4s ease 0s;
+}
+
+.navigation__toggle:hover::before,
+.navigation__toggle:hover::after {
+  background-color: $menu-color-active;
+}
+
+.navigation__toggle:active::before,
+.navigation__toggle:active::after {
+  background-color: hsl(344, 68%, 49%, 0.3);
 }
 
 .navigation__toggle::before {
