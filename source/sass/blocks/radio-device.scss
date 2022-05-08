@@ -3,7 +3,23 @@
   padding: 42px 20px;
 
   @media (min-width: $tablet) {
-    background-color: hsl(0, 0%, 95%);
+    background-color: $menu-color;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+  }
+}
+
+.radio-device__border {
+  @media (min-width: $tablet) {
+    border: 2px solid $input-color;
+    border-radius: $radius;
+  }
+
+  @media (min-width: $desktop) {
+    min-width: 431px;
+    min-height: 297px;
   }
 }
 
@@ -11,16 +27,26 @@
   @include colored-text;
   margin: 0 0 34px 0;
   text-align: center;
+
+  @media (min-width: $tablet) {
+    position: relative;
+    display: inline;
+    padding: 0 25px;
+    top: -15px;
+    left: calc(50% - 184px);
+    background-color: $menu-color;
+    line-height: 30px;
+  }
 }
 
 .radio-device__container {
   border: none;
   margin: 0;
   padding: 0;
-}
 
-.radio-device__legend {
-  display: none;
+  @media (min-width: $tablet) {
+    padding: 34px 0 0 0;
+  }
 }
 
 .radio-device__list {
@@ -33,10 +59,24 @@
   @include desctop-text;
   padding-top: 38px;
   padding-left: 68px;
+
+  @media (min-width: $tablet) {
+    padding-left: 121px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 133px;
+  }
 }
 
 .radio-device__item:first-child {
   padding-top: 0;
+}
+
+.radio-device__item:last-child {
+  @media (min-width: $tablet) {
+    margin-bottom: 54px;
+  }
 }
 
 .radio-device__input {

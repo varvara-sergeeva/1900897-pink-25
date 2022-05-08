@@ -18,7 +18,35 @@
   }
 
   @media (min-width: $desktop) {
+    max-width: 1200px;
+    background-color: transparent;
+    align-self: center;
     padding: 0 130px;
+  }
+}
+
+.header::before,
+.header::after {
+  @media (min-width: $desktop) {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background-color: hsl(0, 0%, 0%, 0.5);
+    width: 100vw;
+    z-index: -1;
+  }
+}
+
+.header::before {
+  @media (min-width: $desktop) {
+    left: calc((100vw - 1200px / 2) * -1);
+  }
+}
+
+.header::after {
+  @media (min-width: $desktop) {
+    right: calc((100vw - 1200px / 2) * -1);
   }
 }
 

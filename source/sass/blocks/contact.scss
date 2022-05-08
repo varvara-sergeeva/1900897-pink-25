@@ -1,43 +1,29 @@
 .contact {
   position: relative;
-  padding: 0 20px;
 }
 
 .contact__list {
-  width: 100%;
+  max-width: 950px;
   height: 300px;
   list-style-type: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   position: relative;
   text-align: center;
   background-color: $menu-color;
   display: grid;
   grid-template: 1fr 1fr 1fr / 1fr;
-}
 
-.contact__list::before {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  position: absolute;
-  left: 0;
-  bottom: -48px;
-  border-bottom: 50px solid transparent;
-  border-right: 50vw solid $menu-color;
-}
+  @media (min-width: $tablet) {
+    grid-template: 1fr 1fr / 1fr 1fr;
+    grid-template-areas: "phone mail" "address address";
+    justify-content: center;
+  }
 
-.contact__list::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  position: absolute;
-  right: 0;
-  bottom: -48px;
-  border-bottom: 50px solid transparent;
-  border-left: 50vw solid $menu-color;
+  @media (min-width: $desktop) {
+    grid-template: auto / 1fr 1fr 1fr;
+    grid-template-areas: "phone address mail";
+  }
 }
 
 .contact__title {
@@ -69,41 +55,64 @@
 }
 
 .contact__link:active {
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 300;
-  color: $slider-color;
-  opacity: 0.3;
+  @include font-options(24px, 32px, lighter, hsl(211, 27%, 21%, 0.3));
 }
 
-.contact__map iframe {
+.contact__map {
+  position: relative;
+  margin-top: 37px;
+}
+
+.contact__map::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  background-color: $menu-color;
+  height: 33px;
+  left: 0;
+  top: -1px;
+  clip-path: polygon(100% 0, 50% 100%, 0 0);
+
+  @media (min-width: $tablet) {
+    height: 68px;
+  }
+
+  @media (min-width: $desktop) {
+    height: 103px;
+  }
+}
+
+.contact__googlemap {
   border: none;
   display: block;
+
+  @media (min-width: $tablet) {
+    min-height: 374px;
+  }
+
+  @media (min-width: $desktop) {
+    min-height: 502px;
+  }
 }
 
-@media (min-width: $tablet) {
-  .contact__list {
-    grid-template: 1fr 1fr / 1fr 1fr;
-    grid-template-areas: "phone mail" "address address";
-    justify-content: center;
-  }
-
-  .contact__item-phone {
+.contact__item-phone {
+  @media (min-width: $tablet) {
     grid-area: phone;
   }
+}
 
-  .contact__item-mail {
+.contact__item-mail {
+  @media (min-width: $tablet) {
     grid-area: mail;
   }
+}
 
-  .contact__item-address {
+.contact__item-address {
+  @media (min-width: $tablet) {
     grid-area: address;
   }
 }
 
-@media (min-width: $tablet) {
-  .contact__list {
-    grid-template: auto / 1fr 1fr 1fr;
-    grid-template-areas: "phone mail address";
-  }
+.contact__item-address > .contact__link {
+  text-decoration: none;
 }

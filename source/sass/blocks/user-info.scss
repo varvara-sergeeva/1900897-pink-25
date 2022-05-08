@@ -1,3 +1,11 @@
+.user-info {
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
+}
+
 .user-info__input {
   @include font-options(18px, 30px, normal, $slider-color);
   width: calc(100% - 56px / 2);
@@ -24,4 +32,23 @@
   @include colored-text;
   display: block;
   padding-bottom: 17px;
+
+  @media (min-width: $tablet) {
+    padding-right: 20px;
+  }
+}
+
+.user-info__input--icon {
+  @media (min-width: $tablet) {
+    width: calc(100% - 86px);
+    position: relative;
+    //background-image: linear-gradient(to right, $menu-color 89%, $input-color 89%, $input-color);
+    //outline-offset: -59px solid $input-color;
+    border-right: 59px solid $input-color;
+
+    &:hover,
+    &:focus {
+      border-right: 59px solid $input-color;
+    }
+  }
 }

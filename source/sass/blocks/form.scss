@@ -1,89 +1,111 @@
-.form__purpose {
-  @include mobile-text;
-  line-height: 30px;
-  text-align: center;
-  margin: 0;
-  padding: 54px 20px;
-}
-
-.form__user-name {
-  padding: 0 20px;
-}
-
-
-.form__field {
-  padding: 42px 20px 0 20px;
-}
-
-@media (min-width: $tablet) {
-  .form {
+.form {
+  @media (min-width: $tablet) {
     display: grid;
     grid-template-columns: 1;
   }
 
-  .form__purpose {
-    order: 1;
-  }
-
-  .form__user-name {
-    order: 2;
-  }
-
-  .form__filter {
-    order: 5;
-  }
-
-  .form__user-contacts {
-    order: 4;
-  }
-
-  .form__radio {
-    order: 3;
-  }
-
-  .form__field {
-    order: 6;
-  }
-
-  .form__submit {
-    order: 7;
-  }
-}
-
-@media (min-width: $desktop) {
-  .form {
+  @media (min-width: $desktop) {
     grid-template-columns: 1fr 1fr;
     max-width: 940px;
     margin: 0 auto;
   }
+}
 
-  .form__purpose {
-    grid-column: span 2;
+.form__purpose {
+  @include mobile-text;
+  line-height: 30px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 54px 20px;
+
+  @media (min-width: $tablet) {
+    @include desctop-text;
+    width: 490px;
+    order: 1;
   }
 
-  .form__user-name {
+  @media (min-width: $desktop) {
+    width: 756px;
+    grid-column: span 2;
+    padding-bottom: 89px;
+  }
+}
+
+.form__purpose::after {
+  @media (min-width: $tablet) {
+    content: " Пожалуйста, заполните форму ниже:";
+  }
+}
+
+.form__user-name {
+  padding: 0 20px;
+
+  @media (min-width: $tablet) {
+    order: 2;
+  }
+
+  @media (min-width: $desktop) {
     grid-row-start: 2;
     grid-row-end: 3;
+    padding: 0 35px 0 0;
+  }
+}
+
+.form__filter {
+  @media (min-width: $tablet) {
+    order: 5;
+    margin: 0 20px;
   }
 
-  .form__radio {
+  @media (min-width: $desktop) {
+    grid-column: span 2;
+    margin: 0;
+  }
+}
+
+.form__user-contacts {
+  @media (min-width: $tablet) {
+    order: 4;
+    margin: 0 20px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-column: span 2;
+    margin: 0;
+  }
+}
+
+.form__radio {
+  @media (min-width: $tablet) {
+    order: 3;
+  }
+
+  @media (min-width: $desktop) {
     grid-row-start: 2;
     grid-row-end: 3;
+    justify-self: end;
+  }
+}
+
+.form__field {
+  margin: 42px 22px 0 22px;
+
+  @media (min-width: $tablet) {
+    order: 6;
   }
 
-  .form__user-contacts {
+  @media (min-width: $desktop) {
     grid-column: span 2;
+    margin: 69px 0 0 0;
+  }
+}
+
+.form__submit {
+  @media (min-width: $tablet) {
+    order: 7;
   }
 
-  .form__filter {
-    grid-column: span 2;
-  }
-
-  .form__field {
-    grid-column: span 2;
-  }
-
-  .form__submit {
+  @media (min-width: $desktop) {
     grid-column: span 2;
   }
 }

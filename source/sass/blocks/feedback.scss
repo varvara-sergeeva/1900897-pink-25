@@ -6,4 +6,8 @@
   text-align: center;
 
   @include font-options(24px, 29px, lighter, $slider-color);
+
+  @media (min-width: $desktop) {
+    @include font-options(50px, 68px, lighter, $slider-color);
+  }
 }
