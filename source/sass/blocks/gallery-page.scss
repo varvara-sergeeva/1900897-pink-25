@@ -62,10 +62,16 @@
   @include mobile-text;
   text-align: center;
   line-height: 30px;
-  margin: 0;
+  max-width: 700px;
+  margin: 0 auto;
   padding: 50px 40px;
+
+  @media (min-width: $tablet) {
+    font-size: 18px;
+  }
 }
 
 .gallery-page__photo {
   box-sizing: border-box;
 }
+

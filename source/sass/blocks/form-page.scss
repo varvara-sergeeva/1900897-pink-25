@@ -54,6 +54,7 @@
 
   @media (min-width: $desktop) {
     @include font-options(50px, 68px, lighter, $menu-color);
-    padding: 184px 220px 104px 220px;
+    max-width: 830px;
+    margin: 0 auto;
   }
 }

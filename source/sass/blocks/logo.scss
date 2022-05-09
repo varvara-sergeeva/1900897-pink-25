@@ -11,45 +11,44 @@
     fill: hsl(0, 0%, 100%, 0.3);
     color: hsl(0, 0%, 100%, 0.3);
   }
+}
 
-  &--middle {
-    display: none;
-  }
-
-  &--big {
-    display: none;
-  }
-
+.logo--small {
   @media (min-width: $tablet) {
-    &--small {
-      display: none;
-    }
-
-    &--middle {
-      display: block;
-    }
-
-    &--big {
-      display: none;
-    }
+    display: none;
   }
 
   @media (min-width: $desktop) {
-    &--small {
-      display: none;
-    }
-
-    &--middle {
-      display: none;
-    }
-
-    &--big {
-      display: block;
-    }
+    display: none;
   }
 }
 
-.logo__footer-glass {
+.logo--middle {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+  }
+
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.logo--big {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+
+  @media (min-width: $desktop) {
+    display: block;
+  }
+}
+
+
+.logo__footer-middle {
   fill: $slider-color;
   color: $menu-color-active;
 
@@ -60,5 +59,28 @@
   &:active {
     fill: hsl(211, 27%, 21%, 0.3);
     color: hsl(344, 68%, 49%, 0.3);
+  }
+
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.logo__footer-big {
+  display: none;
+
+  @media (min-width: $desktop) {
+    display: block;
+    fill: $slider-color;
+    color: $menu-color-active;
+
+    &:hover {
+      fill: $menu-color-active;
+    }
+
+    &:active {
+      fill: hsl(211, 27%, 21%, 0.3);
+      color: hsl(344, 68%, 49%, 0.3);
+    }
   }
 }
