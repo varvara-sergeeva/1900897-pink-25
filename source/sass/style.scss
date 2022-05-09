@@ -4,6 +4,7 @@
 @import "global/visually-hidden.scss";
 @import "global/mixin.scss";
 /*Добавление совместных блоков*/
+@import "global/nojs.scss";
 @import "blocks/page.scss";
 @import "blocks/header.scss";
 @import "blocks/logo.scss";
@@ -42,15 +43,3 @@
 @import "blocks/posting.scss";
 @import "blocks/photo-filter.scss";
 
-
-//* {
-//  background: #000 !important;
-//  color: #0f0 !important;
-//  outline: solid #f00 1px !important;
-//}
-
-.html {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
