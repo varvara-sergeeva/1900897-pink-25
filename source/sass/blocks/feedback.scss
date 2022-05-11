@@ -3,7 +3,19 @@
 }
 
 .feedback__slogan {
-  text-align: center;
-
   @include font-options(24px, 29px, lighter, $slider-color);
+  text-align: center;
+  margin-top: 48px;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet) {
+    font-size: 40px;
+    line-height: 54px;
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: $desktop) {
+    @include font-options(50px, 68px, lighter, $slider-color);
+    margin-bottom: 57px;
+  }
 }

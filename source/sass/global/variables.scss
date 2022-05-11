@@ -3,10 +3,13 @@ $menu-color: hsl(0, 0%, 100%);
 $menu-color-active: hsl(344, 68%, 49%);
 $slider-color: hsl(211, 27%, 21%);
 $input-color: hsl(0, 0%, 90%);
-$form-button-color: hsl(151, 69%, 36%);
-$form-button-color-hover: hsl(151, 61%, 42%);
+$form-button-color: hsl(151, 61%, 42%);
+$form-button-color-hover: hsl(151, 69%, 36%);
+//$test: hsl(0, 0%, 95%);
 //Переменные шрифта
 $ff: "OpenSans", "Arial", sans-serif;
 //Переменные адаптивных величин
 $tablet: 660px;
 $desktop: 1200px;
+//Переменные декоративных элементов
+$radius: 1px;

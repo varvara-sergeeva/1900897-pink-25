@@ -12,8 +12,11 @@
   }
 
   @media (min-width: $desktop) {
-    padding: 130px;
+    max-width: 940px;
     max-height: 514px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 0 0 80px;
   }
 }
 
@@ -25,6 +28,10 @@
     max-width: 300px;
     height: 400px;
     margin: auto 0;
+  }
+
+  @media (min-width: $desktop) {
+    //padding-left: 80px;
   }
 }
 

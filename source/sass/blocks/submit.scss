@@ -1,12 +1,28 @@
 .submit {
   padding: 52px 22px 26px 22px;
   text-align: center;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 69px 0 0 0;
+  }
 }
 
 .submit__note {
   @include mobile-text;
   line-height: 30px;
   text-transform: uppercase;
+  padding-top: 38px;
+
+  @media (min-width: $desktop) {
+    padding: 0;
+  }
 }
 
 .submit__note sup {

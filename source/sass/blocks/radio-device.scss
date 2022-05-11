@@ -1,22 +1,52 @@
 .radio-device {
-  background-color: $input-color;
+  background-color: hsl(0, 0%, 95%);
   padding: 42px 20px;
+
+  @media (min-width: $tablet) {
+    background-color: $menu-color;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+  }
+}
+
+.radio-device__border {
+  @media (min-width: $tablet) {
+    border: 2px solid $input-color;
+    border-radius: $radius;
+  }
+
+  @media (min-width: $desktop) {
+    min-width: 431px;
+    min-height: 297px;
+  }
 }
 
 .radio-device__title {
   @include colored-text;
   margin: 0 0 34px 0;
   text-align: center;
+
+  @media (min-width: $tablet) {
+    position: relative;
+    display: inline;
+    padding: 0 25px;
+    top: -15px;
+    left: calc(50% - 184px);
+    background-color: $menu-color;
+    line-height: 30px;
+  }
 }
 
 .radio-device__container {
   border: none;
   margin: 0;
   padding: 0;
-}
 
-.radio-device__legend {
-  display: none;
+  @media (min-width: $tablet) {
+    padding: 34px 0 0 0;
+  }
 }
 
 .radio-device__list {
@@ -27,14 +57,60 @@
 
 .radio-device__item {
   @include desctop-text;
+  padding-top: 38px;
+  padding-left: 68px;
+
+  @media (min-width: $tablet) {
+    padding-left: 121px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 133px;
+  }
 }
 
-@media (min-width: $tablet) {
-  .radio-device {
-    background-color: $menu-color;
-  }
+.radio-device__item:first-child {
+  padding-top: 0;
+}
 
-  .radio-device__legend {
-    display: block;
+.radio-device__item:last-child {
+  @media (min-width: $tablet) {
+    margin-bottom: 54px;
   }
+}
+
+.radio-device__input {
+  //-webkit-appearance: none;
+  appearance: none;
+  position: absolute;
+  outline: none;
+}
+
+.radio-device__checkbox::before {
+  content: "";
+  position: absolute;
+  display: block;
+  margin-left: -68px;
+  margin-top: -6px;
+  width: 37px;
+  height: 37px;
+  background-color: $menu-color;
+  border: 2px solid $input-color;
+  border-radius: 50%;
+}
+
+.radio-device__checkbox:hover::before {
+  border: 2px solid $slider-color;
+}
+
+.radio-device__input:focus + .radio-device__checkbox::before {
+  border: 2px solid $menu-color-active;
+}
+
+.radio-device__input:checked + .radio-device__checkbox::before {
+  //background-image: radial-gradient(inset hsl(344, 68%, 49%) 0 0 0  4px);  не работает((
+  //box-shadow: inset 0 0 0 11px $menu-color;   работает, но коряво(
+  background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='7.5' cy='7.5' r='7.5' fill='%23D22856'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center center;
 }

@@ -1,23 +1,60 @@
+.form-field__border {
+  @media (min-width: $tablet) {
+    border: 2px solid $input-color;
+    border-radius: $radius;
+    padding: 47px 60px 53px 60px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 44px 60px 45px 60px;
+  }
+}
+
 .form-field__title {
   @include colored-text;
   margin: 0;
   padding-bottom: 22px;
   text-align: center;
+
+  @media (min-width: $tablet) {
+    padding: 0 25px;
+    display: inline;
+    position: relative;
+    top: -60px;
+    left: calc(50% - 130px);
+    background-color: $menu-color;
+  }
 }
 
 .form-field__container {
   border: none;
-  margin: 0;
   padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0 auto;
 }
 
 .form-field__comment {
   @include desctop-text;
-}
+  outline: none;
+  resize: none;
+  border: 2px solid $input-color;
+  padding-top: 16px;
+  padding-left: 20px;
 
-@media (min-width: $desktop) {
-  .form-field__comment {
-    width: 816px;
+  @media (min-width: $tablet) {
+    margin: 0 auto;
+    width: 466px;
+    height: 189px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 788px;
     height: 124px;
   }
+}
+
+.form-field__comment::placeholder {
+  @include desctop-text;
 }

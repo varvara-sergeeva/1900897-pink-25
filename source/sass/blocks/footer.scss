@@ -10,20 +10,17 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-}
 
-
-@media (min-width: $tablet) {
-  .footer {
+  @media (min-width: $tablet) {
     height: 127px;
     flex-direction: row;
     justify-content: space-between;
   }
-}
 
-@media (min-width: $desktop) {
-  .footer {
+  @media (min-width: $desktop) {
     height: 197px;
+    align-self: center;
+    max-width: 1200px;
     padding: 0 130px;
   }
 }

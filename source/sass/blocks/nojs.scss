@@ -1,0 +1,40 @@
+.nojs.header {
+  position: static;
+  height: 325px;
+  flex-direction: column;
+  background-color: $slider-color;
+  padding: 0;
+}
+
+.nojs .header__logo {
+  margin: 22px 0 0 20px;
+  align-self: flex-start;
+}
+
+.nojs .header__navigation {
+  width: 100%;
+}
+
+.nojs .navigation__toggle {
+  display: none;
+}
+
+.nojs .menu {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.nojs .menu__item {
+  text-align: center;
+}
+
+.nojs .navigation::before {
+  content: "";
+  width: 100%;
+  display: block;
+  border-top: 1px solid hsl(0, 0%, 0%);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);
+}

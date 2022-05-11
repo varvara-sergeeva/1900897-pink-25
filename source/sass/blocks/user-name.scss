@@ -1,9 +1,28 @@
-.user-name label {
-  @include colored-text;
-  display: block;
-  padding-bottom: 17px;
+.user-name {
+  @media (min-width: $desktop) {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 69px;
+  }
+}
+
+.user-name__info {
+  @media (min-width: $desktop) {
+    margin: 0;
+  }
+}
+
+.user-name__info:nth-child(3) {
+  @media (min-width: $desktop) {
+    padding: 54px 0;
+  }
 }
 
 .user-name__info:last-child {
   padding-bottom: 44px;
+
+  @media (min-width: $desktop) {
+    padding: 0;
+  }
 }
+
