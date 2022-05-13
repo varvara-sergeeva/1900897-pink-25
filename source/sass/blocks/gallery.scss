@@ -22,7 +22,6 @@
   background-color: $input-color;
 }
 
-
 .gallery__item--panorama {
   position: relative;
 
@@ -35,31 +34,5 @@
   @media (min-width: $desktop) {
     grid-column: span 3;
     max-height: 406px;
-  }
-}
-
-.gallery__item--panorama::after {
-  content: "Панорама дня";
-  width: 140px;
-  height: 30px;
-  position: absolute;
-  top: 0;
-  right: 20px;
-  display: block;
-  background-color: $menu-color-active;
-  color: $menu-color;
-
-  @include font-options(12px, 24px, 700, $menu-color);
-  text-transform: uppercase;
-  text-align: center;
-  padding-top: 6px;
-
-  @media (min-width: $tablet) {
-    top: 57px;
-  }
-
-  @media (min-width: $desktop) {
-    top: 54px;
-    right: 130px;
   }
 }

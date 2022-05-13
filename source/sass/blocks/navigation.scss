@@ -63,20 +63,20 @@
   bottom: 0;
 }
 
-.navigation__toggle.active::before {
+.navigation__toggle.navigation__toggle--active::before {
   transform: rotate(45deg);
   top: 10px;
   left: 13px;
   width: 23px;
 }
 
-.navigation__toggle.active::after {
+.navigation__toggle.navigation__toggle--active::after {
   transform: rotate(-45deg);
   bottom: 10px;
   left: 13px;
   width: 23px;
 }
 
-.navigation__toggle.active span {
+.navigation__toggle.navigation__toggle--active span {
   transform: scale(0);
 }

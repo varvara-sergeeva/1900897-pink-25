@@ -54,10 +54,11 @@
           <h2 class="visually-hidden">Скачать приложение «Пинк».</h2>
           <div class="download-app__image">
             <picture>
-              <source srcset="img/download-app-desctop.png 1x, img/download-app-desctop-2x.png 2x" type="image/png" media="(min-width: 1200px)">
-              <source srcset="img/download-app-tablet.png 1x, img/download-app-tablet-2x.png 2x" type="image/png" media="(min-width: 660px)">
-              <source srcset="img/download-app-mobile.png 1x, img/download-app-mobile-2x.png 2x" type="image/png" media="(max-width: 659px)">
-              <img src="img/download-app-mobile.png" alt="Изображено, как приложение видоизменяет фото.">
+              <source media="(min-width: 1200px)" srcset="img/download-app-desctop.png 1x, img/download-app-desctop-2x.png 2x" type="image/png">
+              <source media="(min-width: 1200px)" srcset="img/download-app-desctop.webp 1x, img/download-app-desctop-2x.webp 2x" type="image/webp">
+              <source media="(min-width: 660px)" srcset="img/download-app-tablet.png 1x, img/download-app-tablet-2x.png 2x" type="image/png">
+              <source media="(min-width: 660px)" srcset="img/download-app-tablet.webp 1x, img/download-app-tablet-2x.webp 2x" type="image/webp">
+              <img src="img/download-app-mobile.png" srcset="img/download-app-mobile-2x.png 2x" type="image/png" alt="Изображено, как приложение видоизменяет фото.">
             </picture>
           </div>
           <p class="download-app__slogan">Взгляните на&nbsp;жизнь иначе!</p>
@@ -65,21 +66,21 @@
           <ul class="download-app__list">
             <li class="download-app__item">
               <a class="download-app__link download-app__link--apple" href="https://www.apple.com/ru/app-store/">
-                <svg class="download-app__link--apple-svg" width="47" height="56">
+                <svg width="47" height="56">
                   <use xlink:href="img/sprite.svg#logo-apple"></use>
                 </svg>
               </a>
             </li>
             <li class="download-app__item">
               <a class="download-app__link download-app__link--android" href="https://play.google.com/store">
-                <svg class="download-app__link--android-svg" width="43" height="47">
+                <svg width="43" height="47">
                   <use xlink:href="img/sprite.svg#logo-android"></use>
                 </svg>
               </a>
             </li>
             <li class="download-app__item">
               <a class="download-app__link download-app__link--windows" href="https://www.microsoft.com/ru-ru/store/apps">
-                <svg class="download-app__link--windows-svg" width="44" height="41">
+                <svg width="44" height="41">
                   <use xlink:href="img/sprite.svg#logo-windows"></use>
                 </svg>
               </a>
@@ -122,6 +123,7 @@
       <aside class="main__research research">
         <div class="research__container">
           <h2 class="visually-hidden">Потверждён положительный эффект на 24 часа.</h2>
+          <img class="research__picture" src="img/research.svg" alt="Иконка часов" width="238" height="276">
           <p class="research__title">Эффект на&nbsp;24&nbsp;часа!</p>
           <p class="research__description">Британские ученые провели исследования и&nbsp;доказали, что положительный эффект от&nbsp;использования приложения длится целые сутки!</p>
           <a class="research__link" href="#" target="_blank">Узнать больше об исследовании</a>
@@ -274,6 +276,6 @@
         </a>
       </div>
     </footer>
-    <script src="./js/script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

@@ -101,6 +101,10 @@
 }
 
 .popup__button {
+  @media (min-width: $tablet) {
+    width: 295px;
+  }
+
   @media (min-width: $desktop) {
     width: 456px;
   }
