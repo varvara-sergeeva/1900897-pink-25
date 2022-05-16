@@ -2,9 +2,347 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+  width: 280px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $tablet) {
+    flex-direction: column;
+  }
+}
+
+.photo-filter__item {
+  position: relative;
+
+  @media (min-width: $tablet) {
+    align-self: flex-start;
+  }
 }
 
 .photo-filter__input {
   position: absolute;
   appearance: none;
+}
+
+.photo-filter__item--crop {
+  @media (min-width: $tablet) {
+    margin-top: 9px;
+    margin-bottom: 25px;
+
+    &::after {
+      content: "";
+      width: 275px;
+      height: 1px;
+      display: block;
+      position: relative;
+      bottom: -25px;
+      background-color: hsl(211, 27%, 21%, 0.1);
+    }
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 0;
+    margin-bottom: 13px;
+
+    &::after {
+      width: 410px;
+      bottom: -13px;
+    }
+  }
+}
+
+.photo-filter__item--fill {
+  @media (min-width: $tablet) {
+    margin-top: 27px;
+    margin-bottom: 23px;
+
+    &::after {
+      content: "";
+      width: 275px;
+      height: 1px;
+      display: block;
+      position: relative;
+      bottom: -23px;
+      background-color: hsl(211, 27%, 21%, 0.1);
+    }
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 15px;
+    margin-bottom: 14px;
+
+    &::after {
+      width: 410px;
+      bottom: -13px;
+    }
+  }
+}
+
+.photo-filter__item--contrast {
+  @media (min-width: $tablet) {
+    margin-top: 26px;
+    margin-bottom: 27px;
+
+    &::after {
+      content: "";
+      width: 275px;
+      height: 1px;
+      display: block;
+      position: relative;
+      bottom: -27px;
+      background-color: hsl(211, 27%, 21%, 0.1);
+    }
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 18px;
+    margin-bottom: 0;
+
+    &::after {
+      background-color: transparent;
+    }
+  }
+}
+
+.photo-filter__crop,
+.photo-filter__fill,
+.photo-filter__contrast {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: inline-block;
+  }
+}
+
+.photo-filter__item--crop .photo-filter__svg {
+  width: 44px;
+  height: 44px;
+
+  @media (min-width: $tablet) {
+    width: 22px;
+    height: 22px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.photo-filter__item--fill .photo-filter__svg {
+  width: 48px;
+  height: 43px;
+
+  @media (min-width: $tablet) {
+    width: 24px;
+    height: 22px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 48px;
+    height: 43px;
+  }
+}
+
+.photo-filter__item--contrast .photo-filter__svg {
+  width: 32px;
+  height: 32px;
+
+  @media (min-width: $tablet) {
+    width: 16px;
+    height: 16px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.photo-filter__svg--small {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+  }
+
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.photo-filter__input:checked + .photo-filter__crop,
+.photo-filter__input:checked + .photo-filter__fill,
+.photo-filter__input:checked + .photo-filter__contrast {
+  display: block;
+  position: relative;
+}
+
+.photo-filter__range-slider {
+  width: 240px;
+  height: 2px;
+  background-color: $slider-color;
+  display: block;
+  position: absolute;
+  top: 39px;
+  left: -20px;
+
+  @media (min-width: $tablet) {
+    width: 202px;
+    top: 10px;
+    left: 55px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 288px;
+    top: 20px;
+    left: 92px;
+  }
+}
+
+.photo-filter__input--crop:checked + .photo-filter__crop {
+  @media (min-width: $tablet) {
+    top: -27px;
+  }
+
+  @media (min-width: $desktop) {
+    top: -49px;
+  }
+}
+
+.photo-filter__input--fill:checked + .photo-filter__fill {
+  @media (min-width: $tablet) {
+    top: -27px;
+  }
+
+  @media (min-width: $desktop) {
+    top: -48px;
+  }
+}
+
+.photo-filter__input--contrast:checked + .photo-filter__contrast {
+  @media (min-width: $tablet) {
+    top: -22px;
+  }
+
+  @media (min-width: $desktop) {
+    top: -37px;
+  }
+}
+
+.photo-filter__fill > .photo-filter__range-slider {
+  top: 39px;
+  left: -99px;
+
+  @media (min-width: $tablet) {
+    width: 202px;
+    top: 10px;
+    left: 56px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 288px;
+    top: 20px;
+    left: 93px;
+  }
+}
+
+.photo-filter__contrast > .photo-filter__range-slider {
+  top: 45px;
+  left: -182px;
+
+  @media (min-width: $tablet) {
+    width: 202px;
+    top: 10px;
+    left: 56px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 288px;
+    top: 15px;
+    left: 93px;
+  }
+}
+
+.photo-filter__active-segment {
+  width: 14px;
+  height: 14px;
+  display: block;
+  position: absolute;
+  top: 31px;
+  right: -146px;
+  background-color: $menu-color;
+  border: 2px solid $menu-color-active;
+  border-radius: 50%;
+
+  @media (min-width: $tablet) {
+    top: 2px;
+    left: 211px;
+  }
+
+  @media (min-width: $desktop) {
+    top: 12px;
+    left: 326px;
+  }
+}
+
+.photo-filter__fill > .photo-filter__active-segment {
+  top: 30px;
+  left: -20px;
+
+  @media (min-width: $tablet) {
+    top: 2px;
+    left: 77px;
+  }
+
+  @media (min-width: $desktop) {
+    top: 12px;
+    left: 127px;
+  }
+}
+
+.photo-filter__contrast > .photo-filter__active-segment {
+  top: 37px;
+  left: -180px;
+
+  @media (min-width: $tablet) {
+    top: 2px;
+    left: 144px;
+  }
+
+  @media (min-width: $desktop) {
+    top: 7px;
+    left: 223px;
+  }
+}
+
+.photo-filter__item:nth-child(2) {
+  padding: 0 35px;
+
+  @media (min-width: $tablet) {
+    padding: 0;
+  }
+}
+
+input[type="radio"]:checked + .photo-filter__svg {
+  color: $menu-color-active;
+}
+
+//здесь не знаю как поменять цвет иконки при состоянии -checked-, не меняя html
+.photo-filter__svg {
+  color: hsl(211, 27%, 21%, 0.3);
+
+  &:hover {
+    color: hsl(211, 27%, 21%, 0.5);
+  }
+
+  @media (min-width: $tablet) {
+    color: $menu-color-active;
+
+    &:hover {
+      color: $menu-color-active;
+    }
+  }
 }

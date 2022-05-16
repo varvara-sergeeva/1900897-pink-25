@@ -19,7 +19,7 @@
   }
 }
 
-.menu.active {
+.menu.menu--active {
   display: block;
   position: absolute;
   top: 66px;
@@ -34,13 +34,13 @@
   text-align: center;
 
   @media (min-width: $tablet) {
-    &.active {
+    &.menu--active {
       top: 110px;
     }
   }
 
   @media (min-width: $desktop) {
-    &.active {
+    &.menu--active {
       display: none;
     }
   }

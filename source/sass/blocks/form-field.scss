@@ -43,6 +43,14 @@
   padding-top: 16px;
   padding-left: 20px;
 
+  &:hover {
+    border-color: $slider-color;
+  }
+
+  &:active {
+    border-color: $menu-color-active;
+  }
+
   @media (min-width: $tablet) {
     margin: 0 auto;
     width: 466px;

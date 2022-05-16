@@ -3,7 +3,7 @@
   padding: 20px;
   height: 750px;
   display: grid;
-  grid-template: minmax(400px, auto) 150px 200px / 1fr;
+  grid-template: minmax(400px, auto) 162px 200px / 1fr;
 
   @media (min-width: $tablet) {
     max-height: 511px;
@@ -16,7 +16,7 @@
     max-height: 514px;
     margin: 0 auto;
     box-sizing: border-box;
-    padding: 0 0 0 80px;
+    padding: 0 0 0 0;
   }
 }
 
@@ -31,19 +31,25 @@
   }
 
   @media (min-width: $desktop) {
-    //padding-left: 80px;
+    margin-left: 80px;
   }
 }
 
 .posting__filter {
-  align-self: center;
+  align-self: start;
   justify-self: center;
+  padding-top: 42px;
 
   @media (min-width: $tablet) {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
+    padding-top: 56px;
+  }
+
+  @media (min-width: $desktop) {
+    justify-self: auto;
   }
 }
 
@@ -85,6 +91,10 @@
   height: 1px;
   background-color: $slider-color;
   opacity: 0.1;
+
+  @media (min-width: $tablet) {
+    background-color: transparent;
+  }
 }
 
 .posting__send button {

@@ -40,15 +40,44 @@
 
 .user-info__input--icon {
   @media (min-width: $tablet) {
-    width: calc(100% - 86px);
+    width: 496px;
     position: relative;
-    //background-image: linear-gradient(to right, $menu-color 89%, $input-color 89%, $input-color);
-    //outline-offset: -59px solid $input-color;
-    border-right: 59px solid $input-color;
+  }
 
-    &:hover,
-    &:focus {
-      border-right: 59px solid $input-color;
-    }
+  @media (min-width: $desktop) {
+    width: 371px;
+  }
+}
+
+.user-info__phone,
+.user-info__mail {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+    position: absolute;
+    z-index: 5;
+  }
+}
+
+.user-info__phone {
+  @media (min-width: $tablet) {
+    top: 23px;
+    right: 63px;
+  }
+
+  @media (min-width: $desktop) {
+    right: 29px;
+  }
+}
+
+.user-info__mail {
+  @media (min-width: $tablet) {
+    top: 25px;
+    right: 65px;
+  }
+
+  @media (min-width: $desktop) {
+    right: 29px;
   }
 }
