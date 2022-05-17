@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Пинк</title>
-    <link rel="icon"href="favicon.ico">
+    <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
     <link rel="manifest" href="favicon.webmanifest">
@@ -62,7 +62,7 @@
             </picture>
           </div>
           <p class="download-app__slogan">Взгляните на&nbsp;жизнь иначе!</p>
-          <button class="download-app__button button button--download" href="#">Скачать приложение</button>
+          <button class="download-app__button button button--download">Скачать приложение</button>
           <ul class="download-app__list">
             <li class="download-app__item">
               <a class="download-app__link download-app__link--apple" href="https://www.apple.com/ru/app-store/">
@@ -170,30 +170,76 @@
         <div class="rate__container slider">
           <h2 class="visually-hidden">Тариф</h2>
           <table class="rate__table table slider__list">
-            <tr class="table__options">
-              <th class="table__item slider__item slider__item-column-option table__item-empty"></th>
+            <tr class="table__label">
+              <th class="table__item slider__item slider__item-column-option"></th>
               <th class="table__item slider__item slider__item-column-base">База<span>1,99 usd</span></th>
-              <th class="table__item slider__item slider__item-column-standard table__item--best">Стандарт<span>3,99 usd</span></th>
+              <th class="table__item slider__item slider__item-column-standard"><span class="table__item--best"></span>Стандарт<span>3,99 usd</span></th>
               <th class="table__item slider__item slider__item-column-unlimited"> Анлим<span>9,99 usd</span></th>
             </tr>
-            <tr class="table__options roow">
+            <tr class="table__options table__options-color">
               <td class="table__item slider__item slider__item-column-option">Розовый фильтр</td>
-              <td class="table__item slider__item slider__item-column-base"><svg width="31" height="21"><use xlink:href="img/sprite.svg#yes"></use></svg></td>
-              <td class="table__item slider__item slider__item-column-standard"><span class="tabel__hidden">Розовый фильтр</span><svg width="31" height="21"><use xlink:href="img/sprite.svg#yes"></use></svg></td>
-              <td class="table__item slider__item slider__item-column-unlimited"><svg width="31" height="21"><use xlink:href="img/sprite.svg#yes"></use></svg></td>
+              <td class="table__item slider__item slider__item-column-base">
+                <div class="slider__content-wrapper">
+                  <span class="slider__text-base">Розовый фильтр</span>
+                  <svg width="31" height="21"><use xlink:href="img/sprite.svg#yes"></use></svg>
+                </div>
+              </td>
+              <td class="table__item slider__item slider__item-column-standard">
+                <div class="slider__content-wrapper">
+                  <span class="slider__text-standard">Розовый фильтр</span>
+                  <svg width="31" height="21"><use xlink:href="img/sprite.svg#yes"></use></svg>
+                </div>
+              </td>
+              <td class="table__item slider__item slider__item-column-unlimited">
+                <div class="slider__content-wrapper">
+                  <span class="slider__text-unlimited">Розовый фильтр</span>
+                  <svg width="31" height="21"><use xlink:href="img/sprite.svg#yes"></use></svg>
+                </div>
+              </td>
             </tr>
-            <tr class="table__options">
+            <tr class="table__options table__options-smiley">
               <td class="table__item slider__item slider__item-column-option">Смайлики</td>
-              <td class="table__item slider__item slider__item-column-base"><svg width="27" height="27"><use xlink:href="img/sprite.svg#no"></use></svg></td>
-              <td class="table__item slider__item slider__item-column-standard"><span class="tabel__hidden">Смайлики</span><svg width="31" height="21"><use xlink:href="img/sprite.svg#yes"></use></svg></td>
-              <td class="table__item slider__item slider__item-column-unlimited"><svg width="31" height="21"><use xlink:href="img/sprite.svg#yes"></use></svg></td>
+              <td class="table__item slider__item slider__item-column-base">
+                <div class="slider__content-wrapper">
+                  <span class="slider__text-base">Смайлики</span>
+                  <svg width="27" height="27"><use xlink:href="img/sprite.svg#no"></use></svg>
+                </div>
+              </td>
+              <td class="table__item slider__item slider__item-column-standard">
+                <div class="slider__content-wrapper">
+                  <span class="slider__text-standard">Смайлики</span>
+                  <svg width="31" height="21"><use xlink:href="img/sprite.svg#yes"></use></svg>
+                </div>
+              </td>
+              <td class="table__item slider__item slider__item-column-unlimited">
+                <div class="slider__content-wrapper">
+                  <span class="slider__text-unlimited">Смайлики</span>
+                  <svg width="31" height="21"><use xlink:href="img/sprite.svg#yes"></use></svg>
+                </div>
+              </td>
             </tr>
-            <tr class="table__options">
+            <tr class="table__options table__options-comment">
               <td class="table__item slider__item slider__item-column-option">Комментарии</td>
-              <td class="table__item slider__item slider__item-column-base"><svg width="27" height="27"><use xlink:href="img/sprite.svg#no"></use></svg></td>
-              <td class="table__item slider__item slider__item-column-standard"><span class="tabel__hidden">Комментарии</span><svg width="27" height="27"><use xlink:href="img/sprite.svg#no"></use></svg></td>
-              <td class="table__item slider__item slider__item-column-unlimited"><svg width="31" height="21"><use xlink:href="img/sprite.svg#yes"></use></svg></td>
+              <td class="table__item slider__item slider__item-column-base">
+                <div class="slider__content-wrapper">
+                  <span class="slider__text-base">Комментарии</span>
+                  <svg width="27" height="27"><use xlink:href="img/sprite.svg#no"></use></svg>
+                </div>
+              </td>
+              <td class="table__item slider__item slider__item-column-standard">
+                <div class="slider__content-wrapper">
+                  <span class="slider__text-standard">Комментарии</span>
+                  <svg width="27" height="27"><use xlink:href="img/sprite.svg#no"></use></svg>
+                </div>
+              </td>
+              <td class="table__item slider__item slider__item-column-unlimited">
+                <div class="slider__content-wrapper">
+                  <span class="slider__text-unlimited">Комментарии</span>
+                  <svg width="31" height="21"><use xlink:href="img/sprite.svg#yes"></use></svg>
+                </div>
+              </td>
             </tr>
+
           </table>
           <p class="rate__toggles slider__toggles">
             <button class="slider__toggle" type="button"></button>
@@ -224,7 +270,6 @@
             </ul>
             <div class="contact__map">
               <iframe  class="contact__googlemap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1648923790899!5m2!1sru!2sru" width="100%" height="200" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" target="_blank" title="Адрес офиса компании разработчиков проекта по улице Большая Конюшенная, 19/8."></iframe>
-              <div class="contact__map-marker"></div>
             </div>
           </div>
         </div>

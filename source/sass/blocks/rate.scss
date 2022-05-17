@@ -1,19 +1,33 @@
 .rate {
   width: 100%;
   height: 506px;
-  background-color: hsl(0, 0%, 95%);
+  background-color: $tabel-back;
   clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 100%);
 }
 
 .rate__container {
+  background: linear-gradient(
+  to bottom,
+  $slider-color 0 96px,
+  $menu-color 96px 153px,
+  $input-color 153px 155px,
+  $menu-color 155px 212px,
+  $input-color 212px 214px,
+  $menu-color 214px 271px,
+  $input-color 271px 500px);
+
+  @media (min-width: $tablet) {
+    background: $tabel-back;
+  }
+
   @media (min-width: $desktop) {
-    max-width: 1130px;
+    max-width: 940px;
     margin: 0 auto;
   }
 }
 
 .rate__toggles {
-  background-color: hsl(0, 0%, 95%);
+  background-color: $tabel-back;
   text-align: center;
   margin: 0;
   padding: 45px 0;

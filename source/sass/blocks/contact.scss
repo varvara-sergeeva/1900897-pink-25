@@ -94,6 +94,27 @@
   }
 }
 
+.contact__map::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  bottom: 69px;
+  left: calc(50% - 18px);
+  display: block;
+  border-radius: 50%;
+  border: 10px solid $menu-color;
+  background-color: $menu-color-active;
+
+  @media (min-width: $tablet) {
+    bottom: 144px;
+  }
+
+  @media (min-width: $desktop) {
+    bottom: 202px;
+  }
+}
+
 .contact__googlemap {
   border: none;
   display: block;
@@ -124,3 +145,7 @@
     grid-area: address;
   }
 }
+
+//.contact__map-marker {
+
+//}
