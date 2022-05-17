@@ -7,7 +7,8 @@
 
 .table th {
   width: 276px;
-  height: 94px;
+  height: 96px;
+  //margin-bottom: 7px;
   background-color: $slider-color;
   border-left: 2px solid $input-color;
   border-right: 2px solid $input-color;
@@ -25,6 +26,7 @@
 .table__label span {
   @include font-options(18px, 30px, lighter, $menu-color);
   display: block;
+  margin-bottom: 15px;
 }
 
 .table__options span {
@@ -32,7 +34,7 @@
 }
 
 .table td {
-  height: 55px;
+  height: 57px;
   background-color: $menu-color;
   border-left: 2px solid $input-color;
   border-right: 2px solid $input-color;

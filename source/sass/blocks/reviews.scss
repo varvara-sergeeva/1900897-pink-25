@@ -1,8 +1,24 @@
 .reviews__container {
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  top: -20px;
+
+  @media (min-width: $tablet) {
+    position: static;
+  }
 }
 
+.reviews__container::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 43px;
+  background-color: $menu-color;
+  position: absolute;
+  top: -41px;
+  z-index: 4;
+}
 
 .reviews__item {
   display: flex;
@@ -48,6 +64,7 @@
 
 .reviews__user-nickname {
   @include mobile-title;
+  //padding-top: 43px;
   display: block;
   line-height: 30px;
   font-style: normal;
@@ -56,6 +73,7 @@
   @media (min-width: $tablet) {
     order: 2;
     font-size: 20px;
+    padding-top: 0;
   }
 
   @media (min-width: $desktop) {
@@ -103,6 +121,8 @@
 }
 
 .reviews__toggles {
+  font-size: 8px;
+  margin-right: 15px;
   text-align: center;
 
   @media (min-width: $desktop) {

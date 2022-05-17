@@ -103,6 +103,7 @@
   @media (min-width: $desktop) {
     padding-top: 32px;
     padding-bottom: 0;
+    padding-right: 60px;
   }
 }
 
@@ -113,6 +114,11 @@
   @media (min-width: $tablet) {
     left: 125px;
     top: 32px;
+  }
+
+  @media (min-width: $tablet) {
+    left: 153px;
+    top: 36px;
   }
 }
 
