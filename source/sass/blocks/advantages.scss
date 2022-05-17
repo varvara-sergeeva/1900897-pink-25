@@ -77,7 +77,7 @@
     align-self: flex-end;
 
     &::after {
-      content: url("../../img/advanteges_tablet.png");
+      content: url("../img/advanteges-tablet.png");
       position: absolute;
       top: -50px;
       left: -260px;
@@ -108,7 +108,7 @@
 }
 
 .advantages__item--friends::after {
-  content: url("../../img/advanteges_mobile.png");
+  content: url("../img/advanteges-mobile.png");
   position: absolute;
   left: calc(50% - 78px);
 
@@ -162,17 +162,17 @@
   }
 
   .advantages__item--mood::before {
-    content: url("../img/advanteges_desctop-grey.png");
+    content: url("../img/advanteges-desctop-grey.png");
     padding-left: calc(50% - 93px);
   }
 
   .advantages__item--changes::before {
-    content: url("../img/advanteges_desctop-pink.png");
+    content: url("../img/advanteges-desctop-pink.png");
     padding-left: calc(50% - 93px);
   }
 
   .advantages__item--friends::before {
-    content: url("../img/advanteges_desctop-smile.png");
+    content: url("../img/advanteges-desctop-smile.png");
     padding-left: calc(50% - 93px);
   }
 }
