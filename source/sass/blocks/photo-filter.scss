@@ -326,11 +326,6 @@
   }
 }
 
-input[type="radio"]:checked + .photo-filter__svg {
-  color: $menu-color-active;
-}
-
-//здесь не знаю как поменять цвет иконки при состоянии -checked-, не меняя html
 .photo-filter__svg {
   color: hsl(211, 27%, 21%, 0.3);
 

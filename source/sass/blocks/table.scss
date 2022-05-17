@@ -1,56 +1,130 @@
 .table {
   border-collapse: collapse;
+  background-color: $tabel-back;
+  border-radius: 1px;
+  overflow: hidden;
 }
 
 .table th {
   width: 276px;
-  height: 94px;
-
-  @include font-options(16px, 30px, bold, $menu-color);
-  text-transform: uppercase;
+  height: 96px;
+  //margin-bottom: 7px;
   background-color: $slider-color;
-  border-left: 2px solid hsl(0, 0%, 95%);
+  border-left: 2px solid $input-color;
+  border-right: 2px solid $input-color;
+
+  @media (min-width: $tablet) {
+    border-left: 2px solid transparent;
+  }
 }
 
-.table span {
-  display: block;
+.table__label {
+  @include font-options(16px, 30px, bold, $menu-color);
+  text-transform: uppercase;
+}
 
+.table__label span {
   @include font-options(18px, 30px, lighter, $menu-color);
+  display: block;
+  margin-bottom: 15px;
+}
+
+.table__options span {
+  text-transform: uppercase;
 }
 
 .table td {
-  height: 55px;
+  height: 57px;
   background-color: $menu-color;
-  border-left: 2px solid hsl(0, 0%, 95%);
+  border-left: 2px solid $input-color;
+  border-right: 2px solid $input-color;
+  border-bottom: 2px solid $input-color;
+
+  @media (min-width: $tablet) {
+    border-left: 2px solid $input-color;
+  }
 }
 
 .table__item:first-child {
   @include font-options(14px, 30px, normal, $slider-color);
   text-transform: uppercase;
   padding-left: 20px;
+
+  @media (min-width: $desktop) {
+    width: 234px;
+  }
 }
 
 .table__item:not(:first-child) {
-  text-align: center;
+  @media (min-width: $tablet) {
+    text-align: center;
+  }
 }
 
-.table__span-no {
+.table__item {
   position: relative;
-  background-color: $menu-color-active;
-  color: $form-button-color;
-  width: 30px;
-  height: 30px;
-  margin: 0 auto;
 }
 
-.table__span-no::before,
-.table__span-no::after {
-  content: "";
-  display: block;
+.table__item--best {
   position: absolute;
-  color: $form-button-color;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 4px;
+  width: 74px;
+  height: 74px;
+  overflow: hidden;
+
+  @media (min-width: $tablet) {
+    width: 61px;
+    height: 61px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 74px;
+    height: 74px;
+  }
+}
+
+.table__item--best::before {
+  content: "Хит";
+  position: absolute;
+  width: 150%;
+  height: 23px;
+  background-color: $menu-color-active;
+  top: calc((100% - 42px) / 2);
+  left: -26px;
+  transform: rotate(-45deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include font-options(14px, 30px, 400, $menu-color);
+
+  @media (min-width: $tablet) {
+    height: 19px;
+  }
+
+  @media (min-width: $desktop) {
+    height: 23px;
+  }
+}
+
+th:first-child {
+  background-color: $tabel-back;
+
+  @media (min-width: $tablet) {
+    border-right: 2px solid transparent;
+  }
+}
+
+th:nth-child(2) {
+  @media (min-width: $tablet) {
+    border-radius: 1px 0 0 0;
+    overflow: hidden;
+  }
+}
+
+.table__options-color > .table__item:first-child {
+  @media (min-width: $tablet) {
+    border-top: 2px solid $input-color;
+  }
 }

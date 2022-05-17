@@ -52,6 +52,7 @@
   grid-column-end: 3;
   position: absolute;
   top: 176px;
+  left: -20px;
 
   @media (min-width: $tablet) {
     grid-column-start: 3;
@@ -74,7 +75,7 @@
   @include font-options(24px, 29px, 300, $menu-color);
   text-align: center;
   margin: 0;
-  padding-top: 29px;
+  padding-top: 23px;
   padding-bottom: 320px;
   order: 1;
 
@@ -95,7 +96,7 @@
   grid-column-end: 3;
   order: 3;
   align-self: flex-end;
-  margin-top: 28px;
+  margin-top: 23px;
   margin-bottom: 32px;
 
   @media (min-width: $tablet) {
@@ -114,7 +115,7 @@
   grid-column-start: 2;
   grid-column-end: 3;
   order: 4;
-  margin: 0;
+  margin: 0 20px;
   padding: 0;
   list-style-type: none;
   display: flex;
@@ -132,7 +133,7 @@
   grid-column-end: 3;
   order: 5;
   margin: 0;
-  padding-top: 23px;
+  padding-top: 15px;
   padding-bottom: 33px;
 
   @include font-options(14px, 24px, 300, $menu-color);

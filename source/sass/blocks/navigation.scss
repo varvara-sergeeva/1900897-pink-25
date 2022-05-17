@@ -24,13 +24,13 @@
   border-radius: 1px;
   transition: all 0.4s ease 0s;
 
-  &:hover {
-    background-color: $menu-color-active;
-  }
-
   &:active {
     background-color: hsl(344, 68%, 49%, 0.3);
   }
+}
+
+.navigation__toggle:hover > span {
+  background-color: $menu-color-active;
 }
 
 .navigation__toggle::before,

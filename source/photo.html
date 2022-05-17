@@ -56,21 +56,22 @@
       <p class="gallery-page__appeal">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
       <div class="gallery__container">
         <ul class="gallery__list">
-          <li class="gallery__item gallery__item--panorama photo">
+          <li class="gallery__item gallery__item--panorama photo photo--panorama">
             <p class="photo__label">Панорама дня</p>
-            <div class="photo__picture">
+            <div class="photo__picture--panorama">
               <picture>
                 <source srcset="img/gallery-panorama-desktop.jpg 1x, img/gallery-panorama-desktop-2x.jpg 2x" type="image/jpg" media="(min-width: 1200px)">
                 <source srcset="img/gallery-panorama-desktop.webp 1x, img/gallery-panorama-desktop-2x.webp 2x" type="image/webp" media="(min-width: 1200px)">
                 <source srcset="img/gallery-panorama-tablet.jpg 1x, img/gallery-panorama-tablet-2x.jpg 2x" type="image/jpg" media="(min-width: 660px)">
                 <source srcset="img/gallery-panorama-tablet.webp 1x, img/gallery-panorama-tablet-2x.webp 2x" type="image/webp" media="(min-width: 660px)">
-                <img src="img/gallery-panorama-mobile.jpg" srcset="img/gallery-panorama-mobile-2x.jpg 2x" alt="Фото с панорамным видом на лесной холм.">
+                <img class="photo__img-panorama" src="img/gallery-panorama-mobile.jpg" srcset="img/gallery-panorama-mobile-2x.jpg 2x" alt="Фото с панорамным видом на лесной холм.">
               </picture>
             </div>
-            <h3 class="photo__author">Анна <small class="photo__posting-time">(5 минут назад)</small></h3>
-            <p class="photo__comment">Прыгать или нет? Напишите в	комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-            <p class="photo__like">Нравится: <span class="photo__like-number">215</span></p>
+            <h3 class="photo__author photo__author--panorama">Анна <small class="photo__posting-time">(5 минут назад)</small></h3>
+            <p class="photo__comment photo__comment--panorama">Прыгать или нет? Напишите в	комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+            <p class="photo__like photo__like--panorama">Нравится: <span class="photo__like-number">215</span></p>
           </li>
+
           <li class="gallery__item photo">
             <div class="photo__picture">
               <picture>
@@ -138,7 +139,7 @@
               </picture>
             </div>
             <h3 class="photo__author">Максим <small class="photo__posting-time">(40 часов назад)</small></h3>
-            <p class="photo__comment">Где снег-то?</p>
+            <p class="photo__comment">Где снег-то? </p>
             <p class="photo__like">Нравится: <span class="photo__like-number">150</span></p>
           </li>
           <li class="gallery__item photo">
@@ -172,7 +173,7 @@
             <img class="posting__photo" src="img/posting-photo-mobile.jpg" srcset="img/posting-photo-mobile-2x.jpg 2x" alt="Загруженное вами фото">
           </picture>
         </div>
-        <div class="posting__filter c">
+        <div class="posting__filter">
           <ul class="photo-filter__list">
 
             <li class="photo-filter__item photo-filter__item--crop">
@@ -181,7 +182,11 @@
                   <use xlink:href="img/sprite.svg#photo-crop"></use>
                 </svg>
               </label>
-              <input class="photo-filter__input photo-filter__input--crop" type="radio" name="processing" value="crop" id="crop" aria-label="Шкала для обрезки изображения">
+
+              <input class="photo-filter__input photo-filter__input--crop"
+              type="radio" name="processing" value="crop" id="crop"
+              aria-label="Шкала для обрезки изображения" checked>
+
               <div class="photo-filter__crop">
                 <div class="photo-filter__range-slider"></div>
                 <span class="photo-filter__active-segment"></span>
@@ -194,7 +199,7 @@
                   <use xlink:href="img/sprite.svg#photo-fill"></use>
                 </svg>
               </label>
-              <input class="photo-filter__input photo-filter__input--fill" type="radio" name="processing" value="fill" id="fill" aria-label="Шкала для заливки изображения" checked>
+              <input class="photo-filter__input photo-filter__input--fill" type="radio" name="processing" value="fill" id="fill" aria-label="Шкала для заливки изображения">
               <div class="photo-filter__fill">
                 <div class="photo-filter__range-slider"></div>
                 <span class="photo-filter__active-segment"></span>

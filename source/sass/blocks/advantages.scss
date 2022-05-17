@@ -1,10 +1,6 @@
 .advantages {
   width: 100%;
   background-color: hsl(0, 0%, 95%);
-
-  @media (min-width: $desktop) {
-    //height: 750px;
-  }
 }
 
 .advanteges__container {
@@ -18,7 +14,7 @@
   width: 100%;
   padding-bottom: 20px;
   background-color: $menu-color;
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 87%, 0 100%);
 }
 
 .advanteges__intro {
@@ -39,6 +35,9 @@
 }
 
 .advanteges__intro-top {
+  margin-top: 39px;
+  margin-bottom: 29px;
+
   @media (min-width: $tablet) {
     width: 100%;
     padding-top: 58px;
@@ -51,6 +50,9 @@
 }
 
 .advanteges__intro-bottom {
+  margin-top: 29px;
+  margin-bottom: 44px;
+
   @media (min-width: $tablet) {
     width: 350px;
     padding-bottom: 75px;
@@ -63,7 +65,7 @@
 }
 
 .advantages__list {
-  padding: 20px 30px;
+  padding: 30px 30px;
   list-style-type: none;
   display: flex;
   flex-direction: column;
@@ -75,13 +77,6 @@
     margin: 0;
     padding-right: 20px;
     align-self: flex-end;
-
-    &::after {
-      content: url("../../img/advanteges_tablet.png");
-      position: absolute;
-      top: -50px;
-      left: -260px;
-    }
   }
 
   @media (min-width: $desktop) {
@@ -90,10 +85,29 @@
     display: flex;
     flex-direction: row;
     align-self: center;
+    padding: 0;
+  }
+}
 
-    &::after {
-      display: none;
+.advantages__list::after {
+  @media (min-width: $tablet) {
+    content: "";
+    background-image: url("../img/advanteges-tablet.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/advanteges-tablet-2x.png");
+      background-size: contain;
     }
+    width: 268px;
+    height: 547px;
+    display: block;
+    position: absolute;
+    top: -50px;
+    left: -260px;
+  }
+
+  @media (min-width: $desktop) {
+    display: none;
   }
 }
 
@@ -108,9 +122,19 @@
 }
 
 .advantages__item--friends::after {
-  content: url("../../img/advanteges_mobile.png");
+  content: "";
+  background-image: url("../img/advanteges-mobile.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/advanteges-mobile-2x.png");
+    background-size: contain;
+  }
+  width: 157px;
+  height: 320px;
   position: absolute;
   left: calc(50% - 78px);
+  bottom: -68%;
+  z-index: -1;
 
   @media (min-width: $tablet) {
     display: none;
@@ -128,6 +152,7 @@
 .advantages__title {
   @include mobile-title;
   text-align: center;
+  margin-bottom: 16px;
 
   @media (min-width: $tablet) {
     text-align: left;
@@ -143,6 +168,7 @@
 .advantages__description {
   @include mobile-text;
   text-align: center;
+  margin: 8px 0;
 
   @media (min-width: $tablet) {
     text-align: left;
@@ -155,24 +181,56 @@
   }
 }
 
-@media (min-width: $desktop) {
-  .advantages__item {
+.advantages__item {
+  @media (min-width: $desktop) {
     position: relative;
     top: -70px;
   }
+}
 
-  .advantages__item--mood::before {
-    content: url("../img/advanteges_desctop-grey.png");
+.advantages__item--mood::before,
+.advantages__item--changes::before,
+.advantages__item--friends::before {
+  @media (min-width: $desktop) {
+    content: "";
+    display: block;
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 186px;
+    height: 382px;
     padding-left: calc(50% - 93px);
   }
+}
 
-  .advantages__item--changes::before {
-    content: url("../img/advanteges_desctop-pink.png");
-    padding-left: calc(50% - 93px);
+.advantages__item--mood::before {
+  @media (min-width: $desktop) {
+    background-image: url("../img/advanteges-desctop-grey.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/advanteges-desctop-grey-2x.png");
+      background-size: contain;
+    }
   }
+}
 
-  .advantages__item--friends::before {
-    content: url("../img/advanteges_desctop-smile.png");
-    padding-left: calc(50% - 93px);
+.advantages__item--changes::before {
+  @media (min-width: $desktop) {
+    background-image: url("../img/advanteges-desctop-pink.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/advanteges-desctop-pink-2x.png");
+      background-size: contain;
+    }
+  }
+}
+
+.advantages__item--friends::before {
+  @media (min-width: $desktop) {
+    background-image: url("../img/advanteges-desctop-smile.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/advanteges-desctop-smile-2x.png");
+      background-size: contain;
+    }
   }
 }
