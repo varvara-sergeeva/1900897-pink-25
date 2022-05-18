@@ -84,6 +84,11 @@
   appearance: none;
   position: absolute;
   outline: none;
+  cursor: pointer;
+}
+
+.flilter__checkbox {
+  cursor: pointer;
 }
 
 .flilter__checkbox::before {

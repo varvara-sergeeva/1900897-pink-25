@@ -24,6 +24,11 @@
 .photo-filter__input {
   position: absolute;
   appearance: none;
+  //cursor: pointer;
+
+  //@media (min-width: $tablet) {
+  //  cursor: auto;
+  //}
 }
 
 .photo-filter__item--crop {
@@ -318,6 +323,11 @@
   }
 }
 
+.photo-filter__active-segment:hover {
+  background-color: $menu-color-active;
+  cursor: pointer;
+}
+
 .photo-filter__item:nth-child(2) {
   padding: 0 35px;
 
@@ -328,6 +338,7 @@
 
 .photo-filter__svg {
   color: hsl(211, 27%, 21%, 0.3);
+  cursor: pointer;
 
   &:hover {
     color: hsl(211, 27%, 21%, 0.5);
@@ -335,6 +346,7 @@
 
   @media (min-width: $tablet) {
     color: $menu-color-active;
+    cursor: auto;
 
     &:hover {
       color: $menu-color-active;

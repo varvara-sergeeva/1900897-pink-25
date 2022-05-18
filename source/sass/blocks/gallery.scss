@@ -1,3 +1,69 @@
+// --------------------------------------------------ПРОБНАЯ ВЕРСИЯ-----------------------------
+
+//.gallery__list {
+//  margin: 0 20px;
+//  max-width: 320px;
+//  padding: 0;
+//  list-style-type: none;
+//  display: grid;
+//  justify-content: center;
+//  grid-template-columns: minmax(280px, 300px);
+//  row-gap: 20px;
+//  column-gap: 20px;
+//  position: relative;
+
+//  @media (min-width: $tablet) {
+//    margin: 0 auto;
+//    max-width: 660px;
+//    grid-template-columns: repeat(2, minmax(280px, 300px));
+//  }
+
+//  @media (min-width: $desktop) {
+//    max-width: 1200px;
+//    grid-template-columns: 110px repeat(3, 300px) 110px;
+//    justify-content: center;
+//    align-content: center;
+//  }
+//}
+
+//.gallery__list:first-child {
+//  @media (min-width: $desktop) {
+//    //max-width: 1200px;
+//    //grid-template-columns: 110px repeat(3, 300px) 110px;
+//    //grid-template-areas: "pano" "item item item" "item item item";
+//  }
+//}
+
+//.gallery__item {
+//  background-color: $input-color;
+
+//  @media (min-width: $desktop) {
+//    grid-area: "item";
+//  }
+//}
+
+//.gallery__item--panorama {
+//  position: relative;
+
+//  @media (min-width: $tablet) {
+//    grid-column: span 2;
+//    min-width: 600px;
+//    min-height: 630px;
+//  }
+
+//  @media (min-width: $desktop) {
+//    grid-area: "pano";
+//    //grid-column: span 3;
+//    grid-column-start: 1;
+//    grid-column-end: 6;
+//    grid-row-start: 1;
+//    grid-row-end: 2;
+
+//  }
+//}
+
+// ----------------------------------------- РАБОЧАЯ ВЕРСИЯ-------------------
+
 .gallery__list {
   margin: 0 20px;
   max-width: 320px;

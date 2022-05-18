@@ -4,6 +4,10 @@
   @media (min-width: $tablet) {
     top: -110px;
   }
+
+  @media (min-width: $desktop) {
+    top: 0;
+  }
 }
 
 .form-page__top {

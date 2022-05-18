@@ -84,6 +84,11 @@
   appearance: none;
   position: absolute;
   outline: none;
+  cursor: pointer;
+}
+
+.radio-device__checkbox {
+  cursor: pointer;
 }
 
 .radio-device__checkbox::before {

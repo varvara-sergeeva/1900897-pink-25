@@ -13,4 +13,20 @@
 
 .page__main {
   flex: 1 1 auto;
+
+  @media (min-width: $desktop) {
+    position: relative;
+  }
+}
+
+.page__main::before {
+  @media (min-width: $desktop) {
+    content: "";
+    position: absolute;
+    height: 110px;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-color: hsl(0, 0%, 0%, 0.5);
+  }
 }
