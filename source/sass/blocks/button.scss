@@ -5,9 +5,9 @@
 
 .button--form {
   @include button-form;
-
   background-color: $form-button-color;
   border-radius: $radius;
+  cursor: pointer;
 
   &:hover {
     background-color: $form-button-color-hover;
@@ -31,6 +31,7 @@
   @include button-oval;
   color: $menu-color;
   border-color: $menu-color;
+  cursor: pointer;
 
   &:hover {
     background-color: $menu-color;
@@ -55,6 +56,7 @@
   border-color: $menu-color-active;
   background-color: transparent;
   text-transform: capitalize;
+  cursor: pointer;
 
   &:hover {
     background-color: $menu-color-active;

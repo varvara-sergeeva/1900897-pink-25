@@ -1,30 +1,31 @@
 .download-app {
   background-color: hsl(213, 26%, 15%);
-  background-image: url("../../img/back-mobile.jpg");
+  background-image: url("../img/back-mobile.jpg");
   background-repeat: no-repeat;
   background-position: top center;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../../img/back-mobile-2x.jpg");
+    background-image: url("../img/back-mobile-2x.jpg");
     background-size: 320px auto;
   }
 
   @media (min-width: $tablet) {
-    background-image: url("../../img/back-tablet.jpg");
+    background-image: url("../img/back-tablet.jpg");
     height: 729px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/back-tablet-2x.jpg");
+      background-image: url("../img/back-tablet-2x.jpg");
       background-size: 100% auto;
     }
   }
 
   @media (min-width: $desktop) {
-    background-image: url("../../img/back-desktop.jpg");
+    background-image: url("../img/back-desktop.jpg");
     height: 853px;
+    background-size: cover;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/back-desktop-2x.jpg");
+      background-image: url("../img/back-desktop-2x.jpg");
       background-size: cover;
     }
   }
@@ -38,12 +39,12 @@
   grid-template-rows: repeat(5, auto);
 
   @media (min-width: $tablet) {
-    grid-template-columns: auto minmax(auto, 300px) minmax(auto, 500px) auto;
+    grid-template-columns: auto minmax(auto, 300px) minmax(auto, 400px) auto;
     padding-top: 202px;
   }
 
   @media (min-width: $desktop) {
-    grid-template-columns: auto minmax(auto, 300px) minmax(auto, 640px) auto;
+    grid-template-columns: auto minmax(auto, 300px) minmax(auto, 440px) auto;
   }
 }
 
@@ -60,6 +61,7 @@
     justify-self: end;
     position: absolute;
     top: 184px;
+    left: -164px;
   }
 
   @media (min-width: $desktop) {

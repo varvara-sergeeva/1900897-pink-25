@@ -18,6 +18,10 @@
   position: absolute;
   top: -41px;
   z-index: 4;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
 }
 
 .reviews__item {
