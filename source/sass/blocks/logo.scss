@@ -12,6 +12,10 @@
     fill: hsl(0, 0%, 100%, 0.3);
     color: hsl(0, 0%, 100%, 0.3);
   }
+
+  @media (min-width: $tablet) {
+    padding-bottom: 10px;
+  }
 }
 
 .logo--small {
@@ -61,6 +65,10 @@
     color: hsl(344, 68%, 49%, 0.3);
   }
 
+  @media (min-width: $tablet) {
+    margin-top: -10px;
+  }
+
   @media (min-width: $desktop) {
     display: none;
   }
@@ -71,6 +79,7 @@
 
   @media (min-width: $desktop) {
     display: block;
+    margin-bottom: 13px;
     fill: $slider-color;
     color: $menu-color-active;
 

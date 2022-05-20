@@ -2,7 +2,7 @@
   width: 100%;
   height: 284px;
   box-sizing: border-box;
-  padding: 40px 20px;
+  padding: 36px 20px;
   background-color: $menu-color;
   display: flex;
   flex-direction: column;
@@ -23,8 +23,16 @@
   }
 }
 
+.footer__social {
+  @media (min-width: $tablet) {
+    padding-right: 17px;
+    padding-bottom: 4px;
+  }
+}
+
 .footer__copyright {
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding-bottom: 2px;
 }

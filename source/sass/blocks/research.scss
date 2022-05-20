@@ -10,14 +10,13 @@
     width: 100%;
     background-color: $menu-color;
     padding-top: 54px;
-    padding-bottom: 109px;
+    padding-bottom: 67px;
   }
 
   @media (min-width: $desktop) {
     background-color: hsl(0, 0%, 95%);
     background-position: 130px 30px;
-    padding-top: 17px;
-    padding-bottom: 67px;
+    padding-top: 0;
   }
 }
 
@@ -31,7 +30,7 @@
 
   @media (min-width: $desktop) {
     max-width: 1200px;
-    grid-template: auto / 369px auto;
+    grid-template: 157px auto auto / auto 370px 570px auto;
     justify-content: center;
   }
 }
@@ -44,6 +43,8 @@
   @media (min-width: $desktop) {
     width: 298px;
     height: 345px;
+    grid-column-start: 2;
+    grid-column-end: 3;
   }
 }
 
@@ -52,11 +53,16 @@
     @include desctop-title;
     width: 170px;
     grid-column-start: 2;
+    margin-top: 43px;
+    margin-bottom: 0;
   }
 
   @media (min-width: $desktop) {
     width: 500px;
     line-height: 30px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    margin: 94px 0 0 0;
   }
 }
 
@@ -65,11 +71,14 @@
     @include mobile-text;
     width: 290px;
     grid-column-start: 2;
+    margin: -10px 0;
   }
 
   @media (min-width: $desktop) {
     @include font-options(18px, 30px, normal, $slider-color);
     width: 500px;
+    grid-column-start: 3;
+    grid-column-end: 4;
   }
 }
 
@@ -81,5 +90,7 @@
 
   @media (min-width: $desktop) {
     @include font-options(18px, 30px, normal, $menu-color-active);
+    grid-column-start: 3;
+    grid-column-end: 4;
   }
 }

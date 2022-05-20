@@ -13,7 +13,14 @@
   border-right: 2px solid $input-color;
 
   @media (min-width: $tablet) {
+    height: 75px;
+    width: 156px;
     border-left: 2px solid transparent;
+  }
+
+  @media (min-width: $desktop) {
+    height: 94px;
+    width: 233px;
   }
 }
 
@@ -25,11 +32,17 @@
 .table__label span {
   @include font-options(18px, 30px, lighter, $menu-color);
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 19px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+  }
 }
 
 .table__options span {
+  @include font-options(14px, 30px, 400, $slider-color);
   text-transform: uppercase;
+  padding-bottom: 3px;
 }
 
 .table td {
@@ -41,6 +54,11 @@
 
   @media (min-width: $tablet) {
     border-left: 2px solid $input-color;
+    height: 43px;
+  }
+
+  @media (min-width: $desktop) {
+    height: 58px;
   }
 }
 
@@ -49,7 +67,14 @@
   text-transform: uppercase;
   padding-left: 20px;
 
+  @media (min-width: $tablet) {
+    text-transform: none;
+    box-sizing: border-box;
+    padding-right: 10px;
+  }
+
   @media (min-width: $desktop) {
+    font-size: 18px;
     width: 234px;
   }
 }
