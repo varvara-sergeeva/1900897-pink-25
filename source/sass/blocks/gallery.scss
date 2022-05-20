@@ -58,7 +58,6 @@
 
   @media (min-width: $tablet) {
     width: 660px;
-    height: 630px;
   }
 
   @media (min-width: $desktop) {
@@ -66,28 +65,3 @@
   }
 }
 
-.gallery__item--panorama::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 137px;
-  left: calc(50% - 140px);
-  display: block;
-  background-color: $input-color;
-  min-width: 280px;
-  min-height: 192px;
-
-  @media (min-width: $tablet) {
-    width: 620px;
-    min-height: 121px;
-    top: 509px;
-    left: calc(50% - 310px);
-  }
-
-  @media (min-width: $desktop) {
-    width: 940px;
-    min-height: 96px;
-    top: 506px;
-    left: calc(50% - 470px);
-  }
-}

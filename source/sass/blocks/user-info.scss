@@ -24,8 +24,10 @@
   }
 }
 
-.user-info__input::placeholder {
-  @include font-options(18px, 30px, normal, $slider-color);
+.user-info__input::-webkit-input-placeholder,
+.user-info__input::-moz-input-placeholder,
+.user-info__input::-ms-input-placeholder {
+  @include font-options(18px, 30px, 400, $slider-color);
 }
 
 .user-info__label {

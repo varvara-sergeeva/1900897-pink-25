@@ -145,7 +145,7 @@
   align-self: center;
 
   @media (min-width: $tablet) {
-    grid-template: 509px auto minmax(40px, 1fr) / 1fr 1fr;
+    grid-template: 509px auto 1fr / 1fr 1fr;
   }
 
   @media (min-width: $desktop) {
@@ -186,6 +186,7 @@
 .photo--panorama > .photo__comment {
   padding-left: 37px;
 
+
   @media (min-width: $tablet) {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -197,8 +198,34 @@
   }
 
   @media (min-width: $desktop) {
-    width: 874px;
+    max-width: 874px;
     padding-left: 157px;
+  }
+}
+
+.photo--panorama > .photo__comment::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 137px;
+  left: calc(50% - 140px);
+  display: block;
+  background-color: $input-color;
+  min-width: 280px;
+  min-height: 192px;
+
+  @media (min-width: $tablet) {
+    width: 620px;
+    min-height: 121px;
+    top: 509px;
+    left: calc(50% - 310px);
+  }
+
+  @media (min-width: $desktop) {
+    width: 940px;
+    min-height: 96px;
+    top: 506px;
+    left: calc(50% - 470px);
   }
 }
 
