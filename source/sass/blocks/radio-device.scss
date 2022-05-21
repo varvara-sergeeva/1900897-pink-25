@@ -1,9 +1,10 @@
 .radio-device {
   background-color: hsl(0, 0%, 95%);
-  padding: 42px 20px;
+  padding: 40px 20px 46px 20px;
 
   @media (min-width: $tablet) {
     background-color: $menu-color;
+    padding: 42px 20px 67px 20px;
   }
 
   @media (min-width: $desktop) {
@@ -25,7 +26,7 @@
 
 .radio-device__title {
   @include colored-text;
-  margin: 0 0 34px 0;
+  margin: 0 0 39px 0;
   text-align: center;
 
   @media (min-width: $tablet) {
@@ -45,7 +46,7 @@
   padding: 0;
 
   @media (min-width: $tablet) {
-    padding: 34px 0 0 0;
+    padding: 27px 0 0 0;
   }
 }
 
@@ -57,8 +58,8 @@
 
 .radio-device__item {
   @include desctop-text;
-  padding-top: 38px;
-  padding-left: 68px;
+  padding-top: 45px;
+  padding-left: 70px;
 
   @media (min-width: $tablet) {
     padding-left: 121px;
@@ -75,7 +76,7 @@
 
 .radio-device__item:last-child {
   @media (min-width: $tablet) {
-    margin-bottom: 54px;
+    margin-bottom: 57px;
   }
 }
 
@@ -94,13 +95,22 @@
   content: "";
   position: absolute;
   display: block;
-  margin-left: -68px;
+  margin-left: -70px;
   margin-top: -6px;
   width: 37px;
   height: 37px;
   background-color: $menu-color;
   border: 2px solid $input-color;
   border-radius: 50%;
+
+  @media (min-width: $tablet) {
+    margin-left: -63px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: -61px;
+    margin-top: -px;
+  }
 }
 
 .radio-device__checkbox:hover::before {

@@ -6,6 +6,11 @@
   @media (min-width: $tablet) {
     padding-bottom: 6px;
   }
+
+  @media (min-width: $desktop) {
+    font-size: 18px;
+    padding-bottom: 6px;
+  }
 }
 
 .copyright__svg {

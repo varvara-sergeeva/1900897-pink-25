@@ -12,7 +12,7 @@
   height: 59px;
   border: 2px solid $input-color;
   border-radius: $radius;
-  padding-left: 22px;
+  padding-left: 20px;
   outline: none;
 
   &:hover {
@@ -33,22 +33,24 @@
 .user-info__label {
   @include colored-text;
   display: block;
-  padding-bottom: 17px;
+  padding-bottom: 10px;
+  padding-left: 24px;
 
   @media (min-width: $tablet) {
     padding-right: 20px;
+    padding-left: 0;
   }
 }
 
 .user-info__input--icon {
   @media (min-width: $tablet) {
-    width: 426px;
+    width: 405px;
     position: relative;
     padding-right: 72px;
   }
 
   @media (min-width: $desktop) {
-    width: 303px;
+    width: 283px;
     padding-right: 70px;
   }
 }
@@ -67,21 +69,23 @@
 .user-info__phone {
   @media (min-width: $tablet) {
     top: 23px;
-    right: 63px;
+    right: 77px;
   }
 
   @media (min-width: $desktop) {
-    right: 29px;
+    top: 43px;
+    right: 46px;
   }
 }
 
 .user-info__mail {
   @media (min-width: $tablet) {
-    top: 25px;
-    right: 65px;
+    top: 52px;
+    right: 78px;
   }
 
   @media (min-width: $desktop) {
-    right: 29px;
+    top: 46px;
+    right: 48px;
   }
 }

@@ -10,7 +10,11 @@
   @media (min-width: $tablet) {
     border: 2px solid $input-color;
     border-radius: $radius;
-    margin-top: 70px;
+    margin-top: 67px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 65px;
   }
 }
 
@@ -23,6 +27,10 @@
     padding-top: 40px;
     padding-left: 60px;
   }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 10px;
+  }
 }
 
 .filter__legend {
@@ -33,7 +41,7 @@
   @include colored-text;
   text-align: center;
   margin: 0 auto;
-  padding: 42px 20px;
+  padding: 38px 20px 42px 20px;
   width: 218px;
 
   @media (min-width: $tablet) {
@@ -48,22 +56,22 @@
 }
 
 .filter__list {
+  @include desctop-text;
   margin: 0;
   padding: 0;
   list-style-type: none;
-
-  @include desctop-text;
 
   @media (min-width: $desktop) {
     max-width: 940px;
     margin: 0 auto;
     display: grid;
-    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+    grid-template: 80px 80px / 1fr 1fr 1fr;
+    column-gap: 50px;
   }
 }
 
 .filter__item {
-  padding-top: 45px;
+  padding-top: 52px;
   padding-left: 57px;
 
   @media (min-width: $desktop) {
@@ -76,7 +84,7 @@
 }
 
 .filter__item:last-child {
-  padding-bottom: 42px;
+  padding-bottom: 46px;
 }
 
 .flilter__input {
@@ -94,8 +102,8 @@
   content: "";
   position: absolute;
   display: block;
-  margin-left: -57px;
-  margin-top: -4px;
+  margin-left: -58px;
+  margin-top: -5px;
   width: 35px;
   height: 35px;
   border: 2px solid $input-color;
