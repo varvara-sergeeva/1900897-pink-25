@@ -140,3 +140,11 @@
     font-size: 14px;
   }
 }
+
+.form__note--desctop {
+  display: none;
+
+  @media (min-width: $desktop) {
+    display: inline;
+  }
+}

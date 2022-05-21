@@ -45,16 +45,16 @@
   text-align: center;
   box-sizing: border-box;
   margin: 0;
-  padding: 102px 40px 84px 40px;
+  padding: 95px 40px 84px 40px;
 
   @media (min-width: $tablet) {
     @include font-options(50px, 68px, lighter, $menu-color);
-    padding: 191px 151px 143px 151px;
+    padding: 177px 151px 143px 151px;
   }
 
   @media (min-width: $desktop) {
     @include font-options(50px, 68px, lighter, $menu-color);
-    padding: 184px 422px 104px 422px;
+    padding: 169px 422px 104px 422px;
   }
 }
 
@@ -62,16 +62,39 @@
   @include mobile-text;
   text-align: center;
   line-height: 30px;
-  max-width: 700px;
   margin: 0 auto;
-  padding: 50px 40px;
+  padding: 44px 40px 30px 40px;
 
   @media (min-width: $tablet) {
+    width: 545px;
+    padding: 91px 40px 57px 40px;
     font-size: 18px;
   }
 
   @media (min-width: $desktop) {
-    width: 575px;
+    width: 550px;
+    padding-bottom: 69px;
+  }
+}
+
+.gallery-page__posting {
+  @media (min-width: $desktop) {
+    margin-bottom: 29px;
+  }
+}
+
+.gallery-page__posting > .gallery-page__appeal {
+  padding-top: 21px;
+  padding-bottom: 43px;
+
+  @media (min-width: $tablet) {
+    padding-top: 44px;
+    padding-bottom: 71px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 5px;
+    padding-bottom: 67px;
   }
 }
 
