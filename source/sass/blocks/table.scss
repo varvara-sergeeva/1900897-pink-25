@@ -11,6 +11,7 @@
   background-color: $slider-color;
   border-left: 2px solid $input-color;
   border-right: 2px solid $input-color;
+  background-clip: padding-box;
 
   @media (min-width: $tablet) {
     height: 75px;
@@ -51,6 +52,7 @@
   border-left: 2px solid $input-color;
   border-right: 2px solid $input-color;
   border-bottom: 2px solid $input-color;
+  background-clip: padding-box;
 
   @media (min-width: $tablet) {
     border-left: 2px solid $input-color;
