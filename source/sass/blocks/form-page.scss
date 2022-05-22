@@ -50,16 +50,17 @@
   text-align: center;
   box-sizing: border-box;
   margin: 0;
-  padding: 102px 46px 51px 46px;
+  padding: 96px 46px 51px 46px;
 
   @media (min-width: $tablet) {
     @include font-options(50px, 68px, lighter, $menu-color);
-    padding: 191px 40px 74px 40px;
+    padding: 177px 40px 74px 40px;
   }
 
   @media (min-width: $desktop) {
     @include font-options(50px, 68px, lighter, $menu-color);
     max-width: 830px;
     margin: 0 auto;
+    padding-top: 170px;
   }
 }

@@ -2,28 +2,32 @@
   @media (min-width: $tablet) {
     border: 2px solid $input-color;
     border-radius: $radius;
-    padding: 47px 60px 53px 60px;
+    padding: 23px 60px 53px 60px;
     box-sizing: border-box;
   }
 
   @media (min-width: $desktop) {
-    padding: 44px 60px 45px 60px;
+    padding: 18px 60px 45px 60px;
   }
 }
 
 .form-field__title {
   @include colored-text;
   margin: 0;
-  padding-bottom: 22px;
+  padding-bottom: 16px;
   text-align: center;
 
   @media (min-width: $tablet) {
     padding: 0 25px;
     display: inline;
     position: relative;
-    top: -60px;
+    top: -35px;
     left: calc(50% - 130px);
     background-color: $menu-color;
+  }
+
+  @media (min-width: $desktop) {
+    top: -32px;
   }
 }
 
@@ -53,13 +57,13 @@
 
   @media (min-width: $tablet) {
     margin: 0 auto;
-    width: 466px;
-    height: 189px;
+    width: 470px;
+    height: 171px;
   }
 
   @media (min-width: $desktop) {
-    width: 788px;
-    height: 124px;
+    width: 790px;
+    height: 106px;
   }
 }
 

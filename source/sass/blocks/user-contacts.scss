@@ -4,12 +4,22 @@
 
 .user-contacts__info {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
+  margin: 0;
+
+  @media (min-width: $tablet) {
+    flex-direction: column-reverse;
+  }
 }
 
 .user-contacts__info > .user-info__label {
-  padding-top: 14px;
-  padding-left: 20px;
+  padding-top: 12px;
+  padding-left: 24px;
+
+  @media (min-width: $tablet) {
+    padding-top: 13px;
+    padding-left: 19px;
+  }
 }
 
 .user-contacts__border {
@@ -20,12 +30,17 @@
 }
 
 .user-contacts__container {
-  padding: 11px 22px 0 22px;
+  padding: 27px 18px 40px 18px;
+
+  @media (min-width: $tablet) {
+    padding: 21px 0 23px 56px;
+  }
 
   @media (min-width: $desktop) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 74px;
+    column-gap: 46px;
+    padding: 0 30px 12px 55px;
   }
 }
 
@@ -50,6 +65,18 @@
   position: relative;
 }
 
+.user-contacts__mail {
+  padding-top: 10px;
+
+  @media (min-width: $tablet) {
+    padding-top: 28px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 19px;
+  }
+}
+
 .user-contacts__phone::after,
 .user-contacts__mail::after {
   @media (min-width: $tablet) {
@@ -60,10 +87,26 @@
     background-color: $input-color;
     position: absolute;
     top: 2px;
-    right: 46px;
+    right: 57px;
   }
 
   @media (min-width: $desktop) {
-    left: 338px;
+    left: 316px;
+  }
+}
+
+.user-contacts__mail::after {
+  @media (min-width: $tablet) {
+    top: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    top: 21px;
+  }
+}
+
+.user-contacts__phone::after {
+  @media (min-width: $desktop) {
+    top: 21px;
   }
 }

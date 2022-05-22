@@ -103,6 +103,12 @@ const copyFavicon = (done) => {
   done();
 }
 
+const copyNormalize = (done) => {
+  gulp.src('source/css/normalize.css')
+  .pipe(gulp.dest('build/css'))
+  done();
+}
+
 // Clean
 
 const clean = () => {
@@ -146,6 +152,7 @@ export const build = gulp.series(
   copy,
   copyFavicon,
   optimizeImages,
+  copyNormalize,
   gulp.parallel(
     styles,
     html,
@@ -161,6 +168,7 @@ export default gulp.series(
   copy,
   copyFavicon,
   copyImages,
+  copyNormalize,
   gulp.parallel(
     styles,
     html,

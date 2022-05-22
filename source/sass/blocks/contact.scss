@@ -12,18 +12,20 @@
   background-color: $menu-color;
   display: grid;
   grid-template: auto auto auto / 1fr;
-  row-gap: 30px;
+  row-gap: 19px;
 
   @media (min-width: $tablet) {
     grid-template: auto auto / 1fr 1fr;
     grid-template-areas: "phone mail" "address address";
     justify-content: center;
-    row-gap: 50px;
+    row-gap: 42px;
+    margin: 0 10px;
   }
 
   @media (min-width: $desktop) {
     grid-template: auto / 1fr 1fr 1fr;
     grid-template-areas: "phone address mail";
+    margin: 20px auto;
   }
 }
 
@@ -31,8 +33,12 @@
   @include font-options(18px, 25px, 700, $slider-color);
   margin: 0 0 0;
 
+  @media (min-width: $tablet) {
+    margin-bottom: 3px;
+  }
+
   @media (min-width: $desktop) {
-    margin: 0 0 26px 0;
+    margin: 0 0 20px 0;
   }
 }
 
@@ -64,7 +70,7 @@
 
 .contact__map {
   position: relative;
-  margin-top: 41px;
+  margin-top: 34px;
 
   @media (min-width: $tablet) {
     margin-top: 26px;
@@ -145,7 +151,3 @@
     grid-area: address;
   }
 }
-
-//.contact__map-marker {
-
-//}

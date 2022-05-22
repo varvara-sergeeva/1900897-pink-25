@@ -2,24 +2,37 @@
   @media (min-width: $desktop) {
     display: flex;
     flex-direction: column;
-    padding-bottom: 69px;
+    padding-bottom: 64px;
   }
 }
 
 .user-name__info {
+  margin: 0;
+
   @media (min-width: $desktop) {
     margin: 0;
   }
 }
 
 .user-name__info:nth-child(3) {
+  margin: 22px 0;
+
+  @media (min-width: $tablet) {
+    margin: 49px 0;
+  }
+
   @media (min-width: $desktop) {
-    padding: 54px 0;
+    padding: 3px 0;
+    margin: 49px 0 47px;
   }
 }
 
 .user-name__info:last-child {
-  padding-bottom: 44px;
+  padding-bottom: 42px;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 24px;
+  }
 
   @media (min-width: $desktop) {
     padding: 0;

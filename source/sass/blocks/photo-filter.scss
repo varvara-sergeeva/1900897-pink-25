@@ -10,11 +10,18 @@
 
   @media (min-width: $tablet) {
     flex-direction: column;
+    padding-left: 29px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 1px;
   }
 }
 
 .photo-filter__item {
   position: relative;
+  width: 48px;
+  height: 48px;
 
   @media (min-width: $tablet) {
     align-self: flex-start;
@@ -24,11 +31,6 @@
 .photo-filter__input {
   position: absolute;
   appearance: none;
-  //cursor: pointer;
-
-  //@media (min-width: $tablet) {
-  //  cursor: auto;
-  //}
 }
 
 .photo-filter__item--crop {
@@ -60,7 +62,7 @@
 
 .photo-filter__item--fill {
   @media (min-width: $tablet) {
-    margin-top: 27px;
+    margin-top: 0;
     margin-bottom: 23px;
 
     &::after {
@@ -80,14 +82,14 @@
 
     &::after {
       width: 410px;
-      bottom: -13px;
+      bottom: 0;
     }
   }
 }
 
 .photo-filter__item--contrast {
   @media (min-width: $tablet) {
-    margin-top: 26px;
+    margin-top: 0;
     margin-bottom: 27px;
 
     &::after {
@@ -272,8 +274,8 @@
 }
 
 .photo-filter__active-segment {
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   display: block;
   position: absolute;
   top: 31px;
@@ -329,7 +331,7 @@
 }
 
 .photo-filter__item:nth-child(2) {
-  padding: 0 35px;
+  padding: 0 32px;
 
   @media (min-width: $tablet) {
     padding: 0;

@@ -5,6 +5,7 @@
   @media (min-width: $desktop) {
     margin: 0;
     padding: 0;
+    width: 620px;
     list-style-type: none;
     text-decoration: none;
     top: 0;
@@ -14,7 +15,7 @@
     background-color: transparent;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
   }
 }
@@ -65,7 +66,8 @@
 
   @media (min-width: $desktop) {
     @include font-options(18px, 18px, normal, $menu-color);
-    margin-left: 79px;
+    //margin-left: 79px;
+    text-transform: none;
   }
 }
 

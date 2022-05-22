@@ -1,7 +1,16 @@
 .copyright__text {
   @include mobile-text;
   line-height: 18px;
-  padding-right: 15px;
+  padding-right: 18px;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 6px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 18px;
+    padding-bottom: 6px;
+  }
 }
 
 .copyright__svg {

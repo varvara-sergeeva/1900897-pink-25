@@ -1,6 +1,6 @@
 .header {
   position: absolute;
-  background-color: hsl(0, 0%, 0%, 0.5);
+  background-color: hsl(0, 0%, 0%, 0.3);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -24,31 +24,6 @@
     padding: 0 130px;
   }
 }
-
-//.header::before,
-//.header::after {
-//  @media (min-width: $desktop) {
-//    content: "";
-//    position: absolute;
-//    top: 0;
-//    height: 100%;
-//    background-color: hsl(0, 0%, 0%, 0.5);
-//    width: 100vw;
-//    z-index: -1;
-//  }
-//}
-
-//.header::before {
-//  @media (min-width: $desktop) {
-//    left: calc((100vw - 1200px) * -1);
-//  }
-//}
-
-//.header::after {
-//  @media (min-width: $desktop) {
-//    right: calc((100vw - 1200px) * -1);
-//  }
-//}
 
 .header--active {
   background-color: $slider-color;
