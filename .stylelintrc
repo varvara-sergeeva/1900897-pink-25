@@ -4,6 +4,7 @@
   "rules": {
     "declaration-no-important": true,
     "indentation": [2, {"ignore": ["inside-parens"]}],
+    "ignorePatterns": ["normalize.scss"],
     "at-rule-no-unknown": null
   }
 }
