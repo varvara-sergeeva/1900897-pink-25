@@ -91,7 +91,7 @@
   position: relative;
 }
 
-.table__item--best {
+.table__item--best span:first-of-type {
   position: absolute;
   top: 0;
   left: 0;
@@ -110,7 +110,7 @@
   }
 }
 
-.table__item--best::before {
+.table__item--best span:first-of-type::before {
   content: "Хит";
   position: absolute;
   width: 150%;
