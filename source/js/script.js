@@ -2,8 +2,10 @@ let burgerToggle = document.querySelectorAll('.navigation__toggle');
 let burgerMenu = document.querySelector('.navigation__menu');
 let header = document.querySelector('.header');
 let back = document.querySelector('.page');
+let map = document.querySelector('.contact__map');
 
 header.classList.remove('nojs');
+map.classList.remove('nojs');
 
 burgerToggle.forEach(function (item) {
   item.addEventListener('click', function () {
