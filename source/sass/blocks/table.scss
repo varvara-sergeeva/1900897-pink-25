@@ -28,6 +28,10 @@
 .table__label {
   @include font-options(16px, 30px, bold, $menu-color);
   text-transform: uppercase;
+
+  @media (min-width: $desktop) {
+    font-size: 18px;
+  }
 }
 
 .table__label span {
@@ -37,6 +41,10 @@
 
   @media (min-width: $tablet) {
     margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 24px;
   }
 }
 

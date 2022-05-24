@@ -2,19 +2,25 @@
   font-family: "OpenSans";
   font-weight: normal;
   font-display: swap;
-  src: url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff");
+  src: local("OpenSans"),
+    url("../fonts/opensans-3.woff2") format("woff2"),
+    url("../fonts/opensans-3.woff") format("woff");
 }
 
 @font-face {
   font-family: "OpenSans";
   font-weight: bold;
   font-display: swap;
-  src: url("../fonts/opensansbold.woff2") format("woff2"), url("../fonts/opensansbold.woff") format("woff");
+  src: local("OpenSans"),
+    url("../fonts/opensansbold.woff2") format("woff2"),
+    url("../fonts/opensansbold.woff") format("woff");
 }
 
 @font-face {
   font-family: "OpenSans";
   font-weight: lighter;
   font-display: swap;
-  src: url("../fonts/opensanslight.woff2") format("woff2"), url("../fonts/opensanslight.woff") format("woff");
+  src: local("OpenSans"),
+    url("../fonts/opensanslight.woff2") format("woff2"),
+    url("../fonts/opensanslight.woff") format("woff");
 }

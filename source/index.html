@@ -7,11 +7,15 @@
     <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
     <link rel="manifest" href="favicon.webmanifest">
+    <link rel="preload" href="../fonts/opensans-3.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="../fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="../fonts/opensanslight.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
 
   <body class="page">
+
     <header class="page__header header nojs">
       <a href="index.html" class="header__logo logo">
         <svg class="logo logo--small" width="74" height="23">
@@ -58,7 +62,7 @@
               <source media="(min-width: 1200px)" srcset="img/download-app-desctop.webp 1x, img/download-app-desctop-2x.webp 2x" type="image/webp">
               <source media="(min-width: 660px)" srcset="img/download-app-tablet.png 1x, img/download-app-tablet-2x.png 2x" type="image/png">
               <source media="(min-width: 660px)" srcset="img/download-app-tablet.webp 1x, img/download-app-tablet-2x.webp 2x" type="image/webp">
-              <img src="img/download-app-mobile.png" srcset="img/download-app-mobile-2x.png 2x" type="image/png" alt="Изображено, как приложение видоизменяет фото.">
+              <img src="img/download-app-mobile.png" srcset="img/download-app-mobile-2x.png 2x" alt="Изображено, как приложение видоизменяет фото.">
             </picture>
           </div>
           <p class="download-app__slogan">Взгляните на&nbsp;жизнь иначе!</p>
@@ -265,7 +269,7 @@
               </li>
               <li class="contact__item contact__item-address">
                 <h3 class="contact__title">Приезжайте в гости:</h3>
-                <a class="contact__link" href="https://goo.gl/maps/KBYEwggQSRNmYjtGA" target="_blank" itemprop="street-address">ул. Большая <br>Конюшенная, 19/8</a>
+                <a class="contact__link" href="https://goo.gl/maps/KBYEwggQSRNmYjtGA" target="_blank">ул. Большая <br>Конюшенная, 19/8</a>
               </li>
             </ul>
             <div class="contact__map nojs">
@@ -276,7 +280,7 @@
                   <source media="(min-width: 1200px)" srcset="img/map-desctop.webp 1x, img/map-desctop-2x.webp 2x" type="image/webp">
                   <source media="(min-width: 660px)" srcset="img/map-tablet.jpg 1x, img/map-tablet-2x.jpg 2x" type="image/jpg">
                   <source media="(min-width: 660px)" srcset="img/map-tablet.webp 1x, img/map-tablet-2x.webp 2x" type="image/webp">
-                  <img src="img/map-mobile.jpg" srcset="img/map-mobile-2x.jpg 2x" type="image/jpg" alt="Карта где указан адрес офиса разработчиков на улице Большая Конюшенная, 19/8.">
+                  <img src="img/map-mobile.jpg" srcset="img/map-mobile-2x.jpg 2x" alt="Карта где указан адрес офиса разработчиков на улице Большая Конюшенная, 19/8.">
                 </picture>
               </div>
             </div>
@@ -330,6 +334,6 @@
         </a>
       </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>
