@@ -5,8 +5,6 @@ let back = document.querySelector('.page');
 let map = document.querySelector('.contact__map');
 
 header.classList.remove('nojs');
-map.classList.remove('nojs');
-
 burgerToggle.forEach(function (item) {
   item.addEventListener('click', function () {
     item.classList.toggle('navigation__toggle--active');
@@ -15,3 +13,5 @@ burgerToggle.forEach(function (item) {
     back.classList.toggle('page--menu');
   })
 });
+
+map.classList.remove('nojs');
