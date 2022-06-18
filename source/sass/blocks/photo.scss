@@ -104,7 +104,7 @@
   position: absolute;
   top: 15px;
   left: calc(100% - 263px);
-  color: transparent;
+  color: inherit;
   stroke: $menu-color-active;
   stroke-width: 0.1rem;
 
@@ -116,6 +116,14 @@
   &:hover {
     color: $menu-color-active;
   }
+}
+
+.photo__like-link {
+  color: transparent;
+}
+
+.photo__like-link.activelike {
+  color: $menu-color-active;
 }
 
 .photo__label {

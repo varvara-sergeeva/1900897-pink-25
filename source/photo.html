@@ -74,7 +74,7 @@
             <h3 class="photo__author">Анна <small class="photo__posting-time">(5 минут назад)</small></h3>
             <p class="photo__comment">Прыгать или нет? Напишите в	комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
             <p class="photo__like">Нравится: <span class="photo__like-number">215</span>
-              <a href="#"><svg width="13" height="12" class="photo__like-svg"><use xlink:href="img/sprite.svg#like"></use></svg></a>
+              <a class="photo__like-link" href="#"><svg width="13" height="12" class="photo__like-svg"><use xlink:href="img/sprite.svg#like"></use></svg></a>
             </p>
           </li>
 
@@ -91,7 +91,7 @@
             <h3 class="photo__author">Левон <small class="photo__posting-time">(5 часов назад)</small></h3>
             <p class="photo__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
             <p class="photo__like">Нравится: <span class="photo__like-number">356</span>
-              <a href="#"><svg width="13" height="12" class="photo__like-svg"><use xlink:href="img/sprite.svg#like"></use></svg></a>
+              <a class="photo__like-link" href="#"><svg width="13" height="12" class="photo__like-svg"><use xlink:href="img/sprite.svg#like"></use></svg></a>
             </p>
           </li>
           <li class="gallery__item photo">
@@ -107,7 +107,7 @@
             <h3 class="photo__author">Антон <small class="photo__posting-time">(12 часов назад)</small></h3>
             <p class="photo__comment">Соседи будут рады!</p>
             <p class="photo__like">Нравится: <span class="photo__like-number">666</span>
-              <a href="#"><svg width="13" height="12" class="photo__like-svg"><use xlink:href="img/sprite.svg#like"></use></svg></a>
+              <a class="photo__like-link" href="#"><svg width="13" height="12" class="photo__like-svg"><use xlink:href="img/sprite.svg#like"></use></svg></a>
             </p>
           </li>
           <li class="gallery__item photo">
@@ -123,7 +123,7 @@
             <h3 class="photo__author">Борис <small class="photo__posting-time">(20 часов назад)</small></h3>
             <p class="photo__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
             <p class="photo__like">Нравится: <span class="photo__like-number">215</span>
-              <a href="#"><svg width="13" height="12" class="photo__like-svg"><use xlink:href="img/sprite.svg#like"></use></svg></a>
+              <a class="photo__like-link"><svg width="13" height="12" class="photo__like-svg"><use xlink:href="img/sprite.svg#like"></use></svg></a>
             </p>
           </li>
           <li class="gallery__item photo">
@@ -139,7 +139,7 @@
             <h3 class="photo__author">Сергей <small class="photo__posting-time">(25 часов назад)</small></h3>
             <p class="photo__comment">Самая кубанская в мире!</p>
             <p class="photo__like">Нравится: <span class="photo__like-number">4</span>
-              <a href="#"><svg width="13" height="12" class="photo__like-svg"><use xlink:href="img/sprite.svg#like"></use></svg></a>
+              <a class="photo__like-link" href="#"><svg width="13" height="12" class="photo__like-svg"><use xlink:href="img/sprite.svg#like"></use></svg></a>
             </p>
           </li>
           <li class="gallery__item photo">
@@ -155,7 +155,7 @@
             <h3 class="photo__author">Максим <small class="photo__posting-time">(40 часов назад)</small></h3>
             <p class="photo__comment">Где снег-то? </p>
             <p class="photo__like">Нравится: <span class="photo__like-number">150</span>
-              <a href="#"><svg width="13" height="12" class="photo__like-svg"><use xlink:href="img/sprite.svg#like"></use></svg></a>
+              <a class="photo__like-link" href="#"><svg width="13" height="12" class="photo__like-svg"><use xlink:href="img/sprite.svg#like"></use></svg></a>
             </p>
           </li>
           <li class="gallery__item photo">
@@ -171,11 +171,12 @@
             <h3 class="photo__author">Надежда <small class="photo__posting-time">(45 часов назад)</small></h3>
             <p class="photo__comment">Всем GM и взаимные лайки!</p>
             <p class="photo__like">Нравится: <span class="photo__like-number">2560</span>
-              <a href="#"><svg width="13" height="12" class="photo__like-svg"><use xlink:href="img/sprite.svg#like"></use></svg></a>
+              <a class="photo__like-link" href="#"><svg width="13" height="12" class="photo__like-svg"><use xlink:href="img/sprite.svg#like"></use></svg></a>
             </p>
           </li>
         </ul>
       </div>
+
     </section>
 
     <section class="gallery-page__posting posting">
@@ -284,6 +285,97 @@
       </a>
     </div>
   </footer>
-  <script src="./js/script.js"></script>
+  <script>
+    // бургерное меню
+    let burgerToggle = document.querySelectorAll('.navigation__toggle');
+    let burgerMenu = document.querySelector('.navigation__menu');
+    let header = document.querySelector('.header');
+    let back = document.querySelector('.page');
+    let map = document.querySelector('.contact__map');
+
+    header.classList.remove('nojs');
+    burgerToggle.forEach(function (item) {
+      item.addEventListener('click', function () {
+        item.classList.toggle('navigation__toggle--active');
+        burgerMenu.classList.toggle('menu--active');
+        header.classList.toggle('header--active');
+        back.classList.toggle('page--menu');
+      })
+    });
+
+    // запуск карты при js
+    map.classList.remove('nojs');
+
+    // слайдер для отзывов
+    const prev = document.querySelector('.reviews__previous');
+    const next = document.querySelector('.reviews__next');
+    const slides = document.querySelectorAll('.reviews__item.slider__item');
+    const toggles = document.querySelectorAll('.reviews__toggles > .slider__toggle');
+    let index = 0;
+
+    const currentSlide = n => {
+      for(let slide of slides) {
+        slide.classList.remove('slider__item--current');
+      }
+      slides[n].classList.add('slider__item--current');
+    }
+
+    const currentToggle = n => {
+      for(let dot of toggles) {
+        dot.classList.remove('slider__toggle--current');
+      }
+      toggles[n].classList.add('slider__toggle--current');
+    }
+
+    const nextSlide = () => {
+      if(index == slides.length - 1) {
+        index = 0;
+        currentSlide(index);
+        currentToggle(index);
+      } else {
+        index++;
+        currentSlide(index);
+        currentToggle(index);
+      }
+    }
+
+    const prevSlide = () => {
+      if(index == 0) {
+        index = slides.length - 1;
+        currentSlide(index);
+        currentToggle(index);
+      } else {
+        index--;
+        currentSlide(index);
+        currentToggle(index);
+      }
+    }
+
+    toggles.forEach((item, indexDot) => {
+      item.addEventListener('click', () => {
+        index = indexDot;
+        currentSlide(index);
+        currentToggle(index);
+      })
+    })
+
+    next.addEventListener('click', nextSlide);
+    prev.addEventListener('click', prevSlide);
+
+    //Лайки для галереи
+
+    let like = document.querySelectorAll(".photo__like-link");
+    let likesNumber = document.querySelectorAll(".photo__like-number");
+
+    like.onclick = function(evt) {
+      evt.preventDefault();
+      if (like.classList.contains('activelike')) {
+        likesNumber.textContent--;
+      } else {
+        likesNumber.textContent++;
+      }
+      like.classList.toggle('activelike');
+    };
+  </script>
 </body>
 </html>

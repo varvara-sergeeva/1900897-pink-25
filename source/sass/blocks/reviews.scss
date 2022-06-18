@@ -25,6 +25,10 @@
 }
 
 .reviews__item {
+  display: none;
+}
+
+.reviews__item.slider__item--current {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -103,15 +107,18 @@
   @include mobile-text;
   line-height: 30px;
   text-align: center;
+  min-height: 180px;
 
   @media (min-width: $tablet) {
     @include font-options(18px, 30px, normal, hsl(211, 27%, 21%));
     margin-bottom: 36px;
     order: 1;
+    min-height: 90px;
   }
 
   @media (min-width: $desktop) {
     width: 688px;
+    justify-self: center;
   }
 }
 
