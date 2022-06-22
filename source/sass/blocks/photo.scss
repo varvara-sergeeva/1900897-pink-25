@@ -100,6 +100,17 @@
   }
 }
 
+.photo__button {
+  padding: 0;
+  border: none;
+  color: transparent;
+  cursor: pointer;
+}
+
+.photo__button.photo__button--like {
+  color: $menu-color-active;
+}
+
 .photo__like-svg {
   position: absolute;
   top: 15px;
@@ -113,17 +124,9 @@
     left: calc(100% - 43px);
   }
 
-  &:hover {
-    color: $menu-color-active;
-  }
-}
-
-.photo__like-link {
-  color: transparent;
-}
-
-.photo__like-link.activelike {
-  color: $menu-color-active;
+  //&:hover {
+  //  color: $menu-color-active;
+  //}
 }
 
 .photo__label {
