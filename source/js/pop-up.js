@@ -1,29 +1,68 @@
-let popup = document.querySelectorAll(".popup");
-let error = document.querySelector(".popup--error");
-let confirm = document.querySelector(".popup--confirm");
-let close = document.querySelector(".button--form");
-let required = document.querySelectorAll(".required");
-const form = document.getElementById("bigform");
+document.addEventListener("DOMContentLoaded", () => {
 
-form && form.addEventListener("submit", function(evt) {
-  evt.preventDefault();
-  console.log("Работает!");
-  }
-);
+  let popup = document.querySelectorAll(".popup");
+  let popupError = document.querySelector(".popup--error");
+  let popupConfirm = document.querySelector(".popup--confirm");
+  let closePopup = document.querySelectorAll(".button--close");
+  let required = document.querySelectorAll(".required");
+  const form = document.getElementById("bigform");
 
-//закрытие popup
-close.addEventListener("click", function(evt){
-  evt.preventDefault();
-  error.classList.remove("popup-show");
-  confirm.classList.remove("popup-show");
-});
+  form && form.addEventListener("submit", formSend);
 
-//закрытие с клавиатуры
-window.addEventListener("keydown", function(evt) {
-  if (evt.key === 'Escape') {
-    if(popup.classList.contains("popup-show")) {
-      evt.preventDefault();
-      popup.classList.remove("popup-show");
+  async function formSend(evt) {
+    evt.preventDefault();
+    let error = formVaidate(form);
+    if (error === 0) {
+      formConfirm();
+      form.reset();
+    } else {
+      formError();
     }
   }
-});
+
+  function formVaidate(form) {
+    let error = 0;
+
+    for (let index = 0; index < required.length; index++) {
+      const input = required[index];
+      inputRemoveError(input);
+
+      if(input.value === "") {
+        inputAddError(input);
+        error++;
+      }
+    }
+
+    function inputAddError(input) {
+      input.classList.add("form--error");
+    }
+
+    function inputRemoveError(input) {
+      input.classList.remove("form--error");
+    }
+
+    return error;
+  }
+
+  function formError() {
+    popupError.classList.add("popup-show");
+  }
+
+  function formConfirm() {
+    popupConfirm.classList.add("popup-show");
+  }
+
+  closePopup.forEach (btn => {
+    btn.addEventListener("click", () => {
+      popupError.classList.remove("popup-show");
+      popupConfirm.classList.remove("popup-show");
+    })
+  })
+
+  document.addEventListener("keydown", function(evt) {
+    if (evt.key === 'Escape') {
+      popupError.classList.remove("popup-show");
+      popupConfirm.classList.remove("popup-show");
+    }
+  });
+})
