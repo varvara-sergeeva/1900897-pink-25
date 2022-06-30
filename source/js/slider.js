@@ -4,6 +4,7 @@ const slides = document.querySelectorAll('.reviews__item.slider__item');
 const toggles = document.querySelectorAll('.reviews__toggles > .slider__toggle');
 let index = 0;
 
+//смещение соотв слайда
 const currentSlide = n => {
   for(let slide of slides) {
     slide.classList.remove('slider__item--current');
@@ -11,6 +12,7 @@ const currentSlide = n => {
   slides[n].classList.add('slider__item--current');
 }
 
+// изменение размера точки
 const currentToggle = n => {
   for(let dot of toggles) {
     dot.classList.remove('slider__toggle--current');

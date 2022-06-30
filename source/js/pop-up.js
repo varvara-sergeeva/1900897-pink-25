@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  let popup = document.querySelectorAll(".popup");
   let popupError = document.querySelector(".popup--error");
   let popupConfirm = document.querySelector(".popup--confirm");
   let closePopup = document.querySelectorAll(".button--close");
