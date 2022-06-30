@@ -11,6 +11,10 @@
   }
 }
 
+.form--error.required {
+  border: 2px solid $menu-color-active;
+}
+
 .form__purpose {
   @include mobile-text;
   line-height: 30px;
