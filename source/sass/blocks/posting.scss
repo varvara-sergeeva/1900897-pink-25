@@ -59,7 +59,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  object-fit: cover;
+  object-fit: contain;
 
   @media (min-width: $tablet) {
     height: 100%;
@@ -73,7 +73,7 @@
 
 .posting__send {
   align-self: center;
-  justify-self: center;
+  padding-left: calc((100% - 280px) / 2);
   position: relative;
 
   @media (min-width: $tablet) {

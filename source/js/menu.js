@@ -1,3 +1,4 @@
+"use strict";
 let burgerToggle = document.querySelectorAll('.navigation__toggle');
 let burgerMenu = document.querySelector('.navigation__menu');
 let header = document.querySelector('.header');

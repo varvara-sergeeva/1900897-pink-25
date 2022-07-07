@@ -160,13 +160,21 @@
   @media (min-resolution: 2dppx) {
     background-image: url("../img/advanteges-mobile-2x.png");
     background-size: contain;
+    background-repeat: no-repeat;
   }
+
   width: 157px;
   height: 320px;
   position: absolute;
   left: calc(50% - 78px);
   bottom: -68%;
   z-index: -1;
+
+  @media (min-width: $middle) {
+    width: 127px;
+    left: calc(50% - 63px);
+    bottom: -78%;
+  }
 
   @media (min-width: $tablet) {
     display: none;

@@ -19,7 +19,7 @@
     grid-template-areas: "phone mail" "address address";
     justify-content: center;
     row-gap: 42px;
-    margin: 0 10px;
+    margin: auto;
   }
 
   @media (min-width: $desktop) {
